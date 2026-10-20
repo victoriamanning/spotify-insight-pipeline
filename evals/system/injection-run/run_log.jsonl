@@ -1,0 +1,6 @@
+{"ts": "2026-10-20T05:32:54.231+00:00", "stage": "ingest", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T05:32:54.234+00:00", "stage": "ingest", "event": "end", "seconds": 0.003}
+{"ts": "2026-10-20T05:32:54.806+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T05:32:57.476+00:00", "stage": "enrich", "event": "end", "seconds": 2.67}
+{"ts": "2026-10-20T05:32:57.619+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T05:32:57.622+00:00", "stage": "export", "event": "end", "seconds": 0.003}

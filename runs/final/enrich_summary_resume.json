@@ -1,0 +1,20 @@
+{
+  "phase": "resume",
+  "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
+  "stats": {
+    "batches_done": 1393,
+    "completed": 64091,
+    "quarantined": 1,
+    "retried": 240,
+    "fallback": 56,
+    "failed_calls": 1
+  },
+  "queue_status": {
+    "completed": 78098,
+    "quarantined": 1
+  },
+  "stop_reason": "queue drained",
+  "wall_clock_s": 2421.945,
+  "spent_usd_total": 1.658631,
+  "finished_at": "2026-10-20T06:07:39.381+00:00"
+}

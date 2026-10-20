@@ -1,0 +1,33 @@
+{
+  "status": "review_required",
+  "working_coverage_point_candidate": 0.6161,
+  "coverage": {
+    "accounted_fraction": 1.0,
+    "duplicate_ids": 0,
+    "expected": 660622,
+    "invalid_or_unresolved": 0,
+    "labelable": 660609,
+    "labelable_completion_fraction": 0.360184,
+    "missing": 0,
+    "quarantined": 422681,
+    "received_lines": 660622,
+    "unique_expected_ids": 660622,
+    "valid_cache_reuses": 159843,
+    "valid_completed": 237941,
+    "valid_completion_fraction": 0.360177
+  },
+  "issue_counts": {
+    "call_config_mismatch": 157,
+    "unfinished_classification": 1
+  },
+  "reported_calls": 1943,
+  "reported_input_tokens": 5854515,
+  "reported_output_tokens": 2862489,
+  "audit_script_sha256": "d60bd66d84922d934c65b3d42b2c7d36cc738e8c75e2d6f2b2f58bca3141c26d",
+  "gold_v1": {
+    "intent": 0.88,
+    "joint": 0.56,
+    "severity": 0.82,
+    "topic": 0.74
+  }
+}

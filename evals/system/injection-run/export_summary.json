@@ -1,0 +1,15 @@
+{
+  "records": 7,
+  "status_counts": {
+    "completed": 6,
+    "quarantined:empty_review_text": 1
+  },
+  "calls": 1,
+  "cache_reuse_rows": 0,
+  "files": {
+    "calls.jsonl": "21f6980f8c06c1b43991da4d89ecab1a009d929b10d07af40926ec1bed27854c",
+    "ingestion.json": "6538d156724c22d393954abdfa845c4a8791f7692ffea1b4e58f85d07e084c42",
+    "records.jsonl.gz": "50f7b5782da31dc9e493700ba689f3fdc22bef0ae5fdbe237857cc3a9e4ba432",
+    "run.json": "10e7e84b08be5bbb5b4c70cb26d1c436a4ee47f497037f1b931225bb421cbc83"
+  }
+}

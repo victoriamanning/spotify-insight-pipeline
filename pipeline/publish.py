@@ -45,7 +45,8 @@ def main():
                "export": opt_json(run_dir / "export_summary.json"), "overall": read_json(run_dir / "overall_metrics.json"),
                "overall_sample_only": opt_json(run_dir / "sample_only" / "overall_metrics.json"),
                "verifier": opt_json(run_dir / "verify" / "verifier_report.json"),
-               "golden": opt_json(ROOT / "evals" / "golden" / "golden_results.json"),
+               "golden": opt_json(ROOT / "evals" / "golden" / "v1" / "golden_results.json"),
+               "golden_v2": opt_json(ROOT / "evals" / "golden" / "v2" / "golden_results.json"),
                "calls": calls, "spent_usd": db.spent(state), "run_summary": opt_json(run_dir / "run_summary.json"),
                "cost_report": "cost/report.md"}
     with psycopg.connect(url, autocommit=False) as con:

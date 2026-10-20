@@ -1,0 +1,9 @@
+{
+  "input_csv": "synthetic_reviews.csv",
+  "file_sha256": "86041c42da7ca13c6d1f835f8623fb48b50c45c55b5bf7fb75dd6e64a1128c3a",
+  "bytes": 1016,
+  "parsed_rows_sha256": "4dce381ae0cd231e2dbd9ea2dff51987b9ae6b609a4f124a3ae021d9fbf0ed83",
+  "records": 7,
+  "dataset_manifest_sha256_expected": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+  "dataset_source": "https://drive.google.com/file/d/1P0rUoAS_wVjp3BYKqXMEyD4u0uJP1Bvf/view"
+}

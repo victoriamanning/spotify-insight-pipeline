@@ -68,8 +68,8 @@
       "provider": "openai",
       "model": "gpt-6-luna",
       "effort": "low",
-      "prompt": "prompts/memo_v1.md",
-      "prompt_version": "memo_v1",
+      "prompt": "prompts/memo_v3.md",
+      "prompt_version": "memo_v3",
       "top_issues": 12,
       "quotes_per_issue": 3,
       "max_output_tokens": 6000

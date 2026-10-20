@@ -1,0 +1,14 @@
+claim_id,issue_id,metric,value
+C1,other.general,priority_score,71289
+C2,billing.free_tier_limits,priority_score,23521
+C3,usability.ads,priority_score,17851
+C4,usability.ui_redesign,priority_score,11703
+C5,playback.stops_skips,priority_score,8542
+C6,other.general,complaint_count,35634
+C7,access.login_failure,priority_score,4704
+C8,playback.stops_skips,mean_severity,3.196856
+C9,playback.crash_wont_open,mean_severity,3.673933
+C10,billing.free_tier_limits,mean_severity,2.767176
+C11,usability.ui_redesign,mean_severity,2.082014
+C12,usability.ads,mean_severity,2.179875
+C13,access.login_failure,mean_severity,3.906977

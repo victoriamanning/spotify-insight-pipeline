@@ -247,7 +247,7 @@ function renderRec(r) {
     <div style="margin:12px 0;white-space:pre-wrap">${chip(m.recommendation)}</div>
     <div class="grid two">
       <div><h2>Supporting numbers (claims re-checked against the database)</h2><div class="scroll"><table><thead><tr><th>Claim</th><th>Issue</th><th>Metric</th><th class="n">Memo</th><th class="n">DB</th><th></th></tr></thead><tbody>${r.claims.map((c) =>
-        `<tr><td>${c.claim_id}</td><td class="mono">${esc(c.issue_id)}</td><td>${esc(c.metric)}</td><td class="n">${esc(c.value)}</td><td class="n">${esc(c.db_value)}</td><td class="${c.matches_database ? "ok" : "no"}">${c.matches_database ? "match" : "MISMATCH"}</td></tr>`).join("")}</tbody></table></div>
+        `<tr><td>${c.claim_id}</td><td class="mono">${esc(c.issue_id)}</td><td>${esc(c.metric)}</td><td class="n">${esc(c.value)}</td><td class="n">${esc(c.db_value)}</td><td class="${c.matches_database ? "ok" : "no"}" title="${c.matches_database ? "matches the database" : "does not match"}">${c.matches_database ? "✓" : "✗"}</td></tr>`).join("")}</tbody></table></div>
         <div class="muted">${allOk ? "Every claim matches the saved ranking." : "Some claims do not match - see table."}</div></div>
       <div><h2>Alternatives considered</h2>${m.alternatives.map((a) => `<div style="margin-bottom:8px"><b>${esc(AREA_LABEL[a.area] || a.area)}</b> - ${chip(a.why_lower)}</div>`).join("")}
         <h2 style="margin-top:12px">Limitations</h2><ul style="margin:0;padding-left:18px">${m.limitations.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></div>
@@ -281,7 +281,8 @@ function renderQuality() {
   const calls = (s.calls || []).reduce((a, c) => { (a[c.role] ||= { n: 0, fail: 0, usd: 0, i: 0, o: 0 }); a[c.role].n += c.n; if (c.outcome === "failed") a[c.role].fail += c.n; a[c.role].usd += c.cost_usd; a[c.role].i += +c.input_tokens; a[c.role].o += +c.output_tokens; return a; }, {});
   $("#quality").innerHTML = `<div><table><tbody>
       <tr><th>Independent verifier</th><td>${v ? `${fmt(v.verified)} sampled texts · topic ${(100 * v.agreement.topic).toFixed(1)}% · intent ${(100 * v.agreement.intent).toFixed(1)}% · severity exact ${(100 * v.agreement.severity_exact).toFixed(1)}% (MAE ${v.severity_mae}) · planted errors caught ${v.planted_error_test.detected}/${v.planted_error_test.planted}` : "-"}</td></tr>
-      <tr><th>Golden 50 (human)</th><td>${g ? `topic ${(100 * g.topic_agreement).toFixed(0)}% · intent ${(100 * g.intent_agreement).toFixed(0)}% · severity exact ${(100 * g.severity_exact_agreement).toFixed(0)}% (MAE ${g.severity_mae_valid}) · ${g.ambiguous_cases} ambiguous` : "pending"}</td></tr>
+      <tr><th>Golden 50 (human, v1 official)</th><td>${g ? `topic ${(100 * g.topic_agreement).toFixed(0)}% · intent ${(100 * g.intent_agreement).toFixed(0)}% · severity exact ${(100 * g.severity_exact_agreement).toFixed(0)}% (MAE ${g.severity_mae_valid}) · ${g.ambiguous_cases} ambiguous` : "pending"}</td></tr>
+      <tr><th>Golden 50 (v2, 8 labels revised after seeing output)</th><td>${s.golden_v2 ? `topic ${(100 * s.golden_v2.topic_agreement).toFixed(0)}% · intent ${(100 * s.golden_v2.intent_agreement).toFixed(0)}% · severity exact ${(100 * s.golden_v2.severity_exact_agreement).toFixed(0)}%` : "-"}</td></tr>
       <tr><th>Distinct texts</th><td>${fmt(s.ingestion.scope.sample_distinct_texts_to_classify)} sent to the model for ${fmt(s.ingestion.scope.sample_reviews)} sampled reviews</td></tr>
     </tbody></table></div>
     <div><table><thead><tr><th>Role</th><th class="n">Calls</th><th class="n">Failed</th><th class="n">In tok</th><th class="n">Out tok</th><th class="n">USD</th></tr></thead><tbody>${Object.entries(calls).map(([k, c]) =>

@@ -19,3 +19,33 @@
 {"ts": "2026-10-20T05:23:47.226+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
 {"ts": "2026-10-20T05:25:41.478+00:00", "stage": "enrich", "event": "stopped", "reason": "interrupted (SIGINT) - finishing in-flight batches, then saving", "seconds": 114.252}
 {"ts": "2026-10-20T05:27:17.418+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:07:45.937+00:00", "stage": "enrich", "event": "end", "seconds": 2428.503}
+{"ts": "2026-10-20T06:08:12.835+00:00", "stage": "verify", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:11:35.970+00:00", "stage": "verify", "event": "end", "seconds": 203.134}
+{"ts": "2026-10-20T06:11:35.971+00:00", "stage": "group", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:12:13.564+00:00", "stage": "group", "event": "end", "seconds": 37.593}
+{"ts": "2026-10-20T06:12:13.565+00:00", "stage": "rank", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:12:19.877+00:00", "stage": "rank", "event": "end", "seconds": 6.312}
+{"ts": "2026-10-20T06:12:19.877+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:12:36.987+00:00", "stage": "memo", "event": "end", "seconds": 17.11}
+{"ts": "2026-10-20T06:12:36.988+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:12:52.501+00:00", "stage": "export", "event": "end", "seconds": 15.512}
+{"ts": "2026-10-20T06:13:28.648+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:13:59.143+00:00", "stage": "memo", "event": "end", "seconds": 30.495}
+{"ts": "2026-10-20T06:14:00.015+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:14:14.705+00:00", "stage": "export", "event": "end", "seconds": 14.689}
+{"ts": "2026-10-20T06:14:49.022+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:15:05.720+00:00", "stage": "memo", "event": "end", "seconds": 16.698}
+{"ts": "2026-10-20T06:15:35.728+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:15:56.784+00:00", "stage": "memo", "event": "end", "seconds": 21.056}
+{"ts": "2026-10-20T06:16:19.991+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:16:25.939+00:00", "stage": "memo", "event": "end", "seconds": 5.948}
+{"ts": "2026-10-20T06:16:38.259+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:16:43.791+00:00", "stage": "memo", "event": "end", "seconds": 5.531}
+{"ts": "2026-10-20T06:16:44.391+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T06:16:58.525+00:00", "stage": "export", "event": "end", "seconds": 14.134}
+{"ts": "2026-10-20T06:22:54.964+00:00", "stage": "enrich", "event": "expand_scope", "work_before": 78099, "work_after": 484189}
+{"ts": "2026-10-20T06:22:59.952+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad708c2e6a88190a90d62259b97f864", "requests": 10, "texts": 500, "reserved_usd": 0.0072}
+{"ts": "2026-10-20T06:35:54.322+00:00", "stage": "enrich", "event": "batch_collect", "batch_id": "batch_6ad708c2e6a88190a90d62259b97f864", "batches_done": 0, "completed": 500, "quarantined": 0, "retried": 0, "fallback": 0, "failed_calls": 0}
+{"ts": "2026-10-20T06:36:36.190+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad70bef531c81909ba45077169ac81f", "requests": 2000, "texts": 100000, "reserved_usd": 1.4468}
+{"ts": "2026-10-20T06:37:19.382+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad70c0ed02c8190bc73e93c569835a8", "requests": 2000, "texts": 100000, "reserved_usd": 1.4468}

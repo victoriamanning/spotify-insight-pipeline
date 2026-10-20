@@ -1,0 +1,8 @@
+area,topics,complaints,share_of_complaints_pct,severity_sum,mean_severity,cancellation_records,severity_4_or_5
+usability,usability,13037,29.0,31212,2.394109,1608,161
+billing_support,billing+support,9751,21.7,27117,2.780946,1983,317
+other,other,10557,23.5,21198,2.007957,774,15
+playback,playback,6497,14.5,20852,3.209481,657,1593
+catalog,catalog,2831,6.3,8126,2.870364,202,33
+access,access,1407,3.1,5430,3.859275,102,1151
+downloads,downloads,813,1.8,2529,3.110701,47,111

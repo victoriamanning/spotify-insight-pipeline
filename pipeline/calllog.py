@@ -19,7 +19,9 @@ def log_attempts(con, run_dir, run_id, attempts, role, phase, label_cfg, review_
             rows.append(rec)
     for r in rows:
         con.execute(
-            "INSERT INTO calls VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "INSERT INTO calls(request_id,run_id,role,phase,model,effort,label_config,review_ids,n_items,attempt,outcome,error,"
+            "input_tokens,cached_tokens,output_tokens,reasoning_tokens,cost_usd,started_at,duration_s,provider_request_id) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (r["request_id"], r["run_id"], r["role"], r["phase"], r["model"], r["effort"], r["label_config"],
              json.dumps(r["review_ids"]), r["n_items"], r["attempt"], r["outcome"], r["error"], r["input_tokens"],
              r["cached_tokens"], r["output_tokens"], r["reasoning_tokens"], r["cost_usd"], r["started_at"],

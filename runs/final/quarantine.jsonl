@@ -1,0 +1,14 @@
+{"review_id": "5d085a1f-1737-45a6-a3fb-5211b327ec27", "source_sha256": "2b005153cd34f075356119ea817ec501d35e0fdd12e94c10ea350ee48e005a75", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "be032618-08ae-4dde-b0b2-d2ddcd8ea5a6", "source_sha256": "a3592cd9aec59d71810e254792af2ba6ffb59469ea34ba78cdfa0cf109a1a6cc", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "f7c94991-0fc2-49a5-b47e-510e97a1632c", "source_sha256": "dc4656976edceb62f8a33745d1dc08c18b36a6863d74c80843d5fd71bb62d930", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "f5b40f1f-6621-456f-b1f2-0b3a9361c793", "source_sha256": "efbf8c1385ce4421e6e88c03e3e63187cba3fcc7890d41246554cbffd86479cd", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "7121867d-b162-4b15-a45f-6352dcff92c1", "source_sha256": "4839b45c8a09ddc507c2a1b1b58eaa8ed15ae72886b36b8dfd5574912f03da0a", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "f0df3892-1cfd-44f6-b3bb-a2eef7e69f6e", "source_sha256": "0c01014a4436bc654c79308bf9a7a0187a0335a9f0d896186975d3c8aac99804", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "a3b536ac-b508-4e02-8550-ff7ea0bf79c2", "source_sha256": "bdd1c88dd6cccdef0f31ba36bcf7e872277879adb8e488f47096bb42a24cf30a", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "b9587209-7961-4fd2-903c-fcd0fa924721", "source_sha256": "d386d80b29739ca1799ad1decec3d3dd952f1e38b17bce2c1f2425e8f8c59f34", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "1687e070-9c26-4657-9ecc-0141405bcd4b", "source_sha256": "618fbac5a28668cbdcdf295f3fbce98225e68808807acbb8b25fd7236e1821ae", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "34bf6347-1625-46cd-b6fa-82913e2f665d", "source_sha256": "ed4608422c212b5bc93ff3a3d4f536ab6138fd32cec933c441c8f96435cc553b", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "ae1be1fe-9df8-4d92-87c2-cafc3244bc5e", "source_sha256": "229f858401f19060a07ff25e1c783e02f1b6b483a36e064f83aaa3f218c64619", "status": "quarantined", "reason": "invalid_model_output:wrong_field_count:8", "attempts": 2}
+{"review_id": "e4a05a09-be34-40a3-9b4a-e3976dea1b82", "source_sha256": "4a3da34049c113d3219fe180a293f35f3535b350f2c01e2682f4023488722245", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "1bbad718-5df1-4669-841d-d1d6a040945a", "source_sha256": "99e96b4f8a1af0e0256bae18ba0588dfbd9ca8c4f11d1e4055979505cd7fe37a", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}
+{"review_id": "7c26b1a0-8e0b-426d-976c-15b526f94e30", "source_sha256": "d21cc537c6f8c804c06eda549e11029be90d0945e698adde3decc7f7766e92cc", "status": "quarantined", "reason": "empty_review_text", "attempts": 0}

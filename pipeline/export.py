@@ -9,7 +9,7 @@ from .common import file_sha, read_json, write_json, write_jsonl
 from .records import iter_records, primary_lc
 
 CALL_FIELDS = ("request_id", "role", "review_ids", "model", "phase", "outcome", "label_config", "input_tokens", "output_tokens",
-               "cached_tokens", "reasoning_tokens", "effort", "attempt", "error", "cost_usd", "started_at", "duration_s", "run_id")
+               "cached_tokens", "reasoning_tokens", "effort", "attempt", "error", "cost_usd", "started_at", "duration_s", "run_id", "tier")
 
 
 def run(cfg, run_dir, out_dir, log=print):
@@ -44,7 +44,8 @@ def run(cfg, run_dir, out_dir, log=print):
     for r in con.execute("SELECT * FROM calls ORDER BY started_at"):
         d = dict(r)
         d["review_ids"] = json.loads(d["review_ids"])
-        calls.append({k: d[k] for k in CALL_FIELDS})
+        d.setdefault("tier", "standard")
+        calls.append({k: (d[k] if d[k] is not None else "standard") if k == "tier" else d[k] for k in CALL_FIELDS})
     write_jsonl(out_dir / "calls.jsonl", calls)
     for name in ("membership.csv", "ranking.csv", "claims.csv", "checkpoint_before.json", "checkpoint_after.json"):
         src = run_dir / name

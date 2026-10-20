@@ -49,3 +49,38 @@
 {"ts": "2026-10-20T06:35:54.322+00:00", "stage": "enrich", "event": "batch_collect", "batch_id": "batch_6ad708c2e6a88190a90d62259b97f864", "batches_done": 0, "completed": 500, "quarantined": 0, "retried": 0, "fallback": 0, "failed_calls": 0}
 {"ts": "2026-10-20T06:36:36.190+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad70bef531c81909ba45077169ac81f", "requests": 2000, "texts": 100000, "reserved_usd": 1.4468}
 {"ts": "2026-10-20T06:37:19.382+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad70c0ed02c8190bc73e93c569835a8", "requests": 2000, "texts": 100000, "reserved_usd": 1.4468}
+{"ts": "2026-10-20T07:35:26.807+00:00", "stage": "enrich", "event": "batch_collect", "batch_id": "batch_6ad70bef531c81909ba45077169ac81f", "batches_done": 0, "completed": 99796, "quarantined": 0, "retried": 204, "fallback": 0, "failed_calls": 0}
+{"ts": "2026-10-20T07:41:21.978+00:00", "stage": "enrich", "event": "batch_collect", "batch_id": "batch_6ad70c0ed02c8190bc73e93c569835a8", "batches_done": 0, "completed": 99783, "quarantined": 0, "retried": 217, "fallback": 0, "failed_calls": 1}
+{"ts": "2026-10-20T07:41:59.774+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad71b2fa1b8819082b87da39148ec82", "requests": 2200, "texts": 110000, "reserved_usd": 1.6099}
+{"ts": "2026-10-20T09:04:31.065+00:00", "stage": "enrich", "event": "batch_collect", "batch_id": "batch_6ad71b2fa1b8819082b87da39148ec82", "batches_done": 0, "completed": 109689, "quarantined": 0, "retried": 311, "fallback": 0, "failed_calls": 2}
+{"ts": "2026-10-20T09:05:15.263+00:00", "stage": "enrich", "event": "batch_submit", "batch_id": "batch_6ad72eb7ce4c8190952be66b13f9d9ac", "requests": 1912, "texts": 95590, "reserved_usd": 1.4076}
+{"ts": "2026-10-20T15:56:19.271+00:00", "stage": "enrich", "event": "batch_collect", "batch_id": "batch_6ad72eb7ce4c8190952be66b13f9d9ac", "batches_done": 0, "completed": 95417, "quarantined": 0, "retried": 173, "fallback": 0, "failed_calls": 0}
+{"ts": "2026-10-20T16:00:00Z", "stage": "budget", "event": "stage_caps_rebalanced", "detail": "scope expanded to full corpus with user-approved extra budget; global cap unchanged at $6.50; stage caps enrich 6.15 verify 0.15 group 0.05 memo 0.15"}
+{"ts": "2026-10-20T15:57:08.425+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T15:58:37.751+00:00", "stage": "enrich", "event": "end", "seconds": 89.327}
+{"ts": "2026-10-20T15:59:01.566+00:00", "stage": "verify", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:04:57.803+00:00", "stage": "verify", "event": "end", "seconds": 356.209}
+{"ts": "2026-10-20T16:04:57.805+00:00", "stage": "group", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:06:50.557+00:00", "stage": "group", "event": "end", "seconds": 112.751}
+{"ts": "2026-10-20T16:06:50.558+00:00", "stage": "rank", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:07:13.565+00:00", "stage": "rank", "event": "end", "seconds": 23.006}
+{"ts": "2026-10-20T16:07:13.567+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:07:47.511+00:00", "stage": "memo", "event": "end", "seconds": 33.944}
+{"ts": "2026-10-20T16:07:47.511+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:08:55.044+00:00", "stage": "export", "event": "end", "seconds": 67.532}
+{"ts": "2026-10-20T16:09:15.065+00:00", "stage": "group", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:10:16.214+00:00", "stage": "group", "event": "end", "seconds": 61.148}
+{"ts": "2026-10-20T16:10:19.399+00:00", "stage": "rank", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:11:31.025+00:00", "stage": "rank", "event": "end", "seconds": 71.624}
+{"ts": "2026-10-20T16:11:35.173+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:12:21.937+00:00", "stage": "memo", "event": "end", "seconds": 46.764}
+{"ts": "2026-10-20T16:12:28.163+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:13:08.342+00:00", "stage": "export", "event": "end", "seconds": 40.179}
+{"ts": "2026-10-20T16:16:42.548+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:20:46.602+00:00", "stage": "memo", "event": "end", "seconds": 244.053}
+{"ts": "2026-10-20T16:21:39.052+00:00", "stage": "memo", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:25:18.017+00:00", "stage": "memo", "event": "end", "seconds": 218.963}
+{"ts": "2026-10-20T16:25:35.010+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:26:09.900+00:00", "stage": "export", "event": "end", "seconds": 34.889}
+{"ts": "2026-10-20T16:26:56.810+00:00", "stage": "export", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T16:27:33.960+00:00", "stage": "export", "event": "end", "seconds": 37.149}

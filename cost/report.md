@@ -47,6 +47,20 @@ Formula: `item_cost = billed_units x price_per_unit`; items are mutually exclusi
 | 550 | 550 | 0.017770 | 0.00003231 | 50.3 | 486 |
 | 10050 | 10087 | 0.219077 | 0.00002172 | 37.3 | 3651 |
 
+## Actual full run (`runs/final`), recomputed from its call log
+
+Scope grew from the declared 100k sample to the full corpus after the budget allowed; the remaining 406,090 distinct texts used the OpenAI **Batch API** (50% rates, tier recorded per call).
+
+| role | tier | calls | failed | review IDs sent | input tok | cached tok | output tok | API USD |
+|---|---|---|---|---|---|---|---|---|
+| enrich | batch | 8122 | 3 | 406090 | 26956131 | 16160911 | 14383804 | 4.2165 |
+| enrich | standard | 1897 | 9 | 81766 | 5828863 | 3772397 | 2875335 | 1.6810 |
+| group | standard | 4 | 0 | 1280 | 53952 | 26954 | 15948 | 0.0109 |
+| memo | standard | 10 | 0 | 360 | 34950 | 3675 | 11372 | 0.0089 |
+| verify | standard | 131 | 0 | 3261 | 136870 | 0 | 34280 | 0.0308 |
+
+**Total full-run API spend: $5.9482** (pilot excluded; spend cap $6.50).
+
 ## Projections (estimates, not measurements)
 
 Controls: spend limit **$6.50**, output cap **60** tokens/review, max workers **8**, max fallback fraction **2%**, verify 2% (min 50, max 2000).

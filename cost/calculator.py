@@ -85,6 +85,7 @@ def main():
     ap.add_argument("--scope-texts", type=int, default=None, help="distinct texts in the declared scope (default from assumptions)")
     ap.add_argument("--import-run", default=None)
     ap.add_argument("--refresh", default=None, help="main run dir: measure the first 550 and 10,050 enriched texts")
+    ap.add_argument("--full-run", default=None, help="main run dir: add the actual full-run spend (by stage and tier) recomputed from its calls")
     ap.add_argument("--out", default=HERE / "report.md")
     a = ap.parse_args()
 
@@ -224,6 +225,19 @@ def main():
         L += ["## Refreshed measurements from the main run", "", "| checkpoint (texts) | measured texts | enrich cost USD | cost/text | output tok/text | summed call s |", "|---|---|---|---|---|---|"]
         L += [f"| {r['checkpoint_texts']} | {r['measured_texts']} | {r['enrich_cost_usd']:.6f} | {r['cost_per_text']:.8f} | {r['output_tokens_per_text']:.1f} | {r['summed_call_seconds']:.0f} |" for r in refresh_rows]
         L += [""]
+    if a.full_run:
+        fr = defaultdict(lambda: defaultdict(float))
+        for c in read_jsonl(Path(a.full_run) / "grading" / "calls.jsonl"):
+            _, _, t = bill(c, rates, c.get("tier") or "standard")
+            k = (c["role"], c.get("tier") or "standard")
+            fr[k]["calls"] += 1; fr[k]["failed"] += c["outcome"] == "failed"; fr[k]["items"] += len(c["review_ids"])
+            fr[k]["in"] += c["input_tokens"]; fr[k]["cached"] += c.get("cached_tokens", 0); fr[k]["out"] += c["output_tokens"]; fr[k]["usd"] += t or 0
+        tot = sum(v["usd"] for v in fr.values())
+        L += ["## Actual full run (`runs/final`), recomputed from its call log", "",
+              "Scope grew from the declared 100k sample to the full corpus after the budget allowed; the remaining 406,090 distinct texts used the OpenAI **Batch API** (50% rates, tier recorded per call).", "",
+              "| role | tier | calls | failed | review IDs sent | input tok | cached tok | output tok | API USD |", "|---|---|---|---|---|---|---|---|---|"]
+        L += [f"| {r} | {t} | {int(v['calls'])} | {int(v['failed'])} | {int(v['items'])} | {int(v['in'])} | {int(v['cached'])} | {int(v['out'])} | {v['usd']:.4f} |" for (r, t), v in sorted(fr.items())]
+        L += ["", f"**Total full-run API spend: ${tot:.4f}** (pilot excluded; spend cap ${assumptions['spend_limit_usd']:.2f}).", ""]
     L += ["## Projections (estimates, not measurements)", "",
           f"Controls: spend limit **${assumptions['spend_limit_usd']:.2f}**, output cap **{cap_out}** tokens/review, max workers **{W}**, "
           f"max fallback fraction **{assumptions['max_fallback_fraction']:.0%}**, verify {assumptions['verify_fraction']:.0%} (min {assumptions['verify_min_sample']}, max {assumptions['verify_max_sample']}).",

@@ -87,6 +87,8 @@ def main():
                               int(meta["review_likes"]) if meta["review_likes"].isdigit() else None, meta["review_timestamp"],
                               meta["in_sample"], v.get("topic"), v.get("intent"), v.get("severity")))
                 n += 1
+        con.execute("INSERT INTO status_counts SELECT run_id, status, COALESCE(reason,''), COUNT(*), "
+                    "SUM(CASE WHEN cache_source_id IS NOT NULL THEN 1 ELSE 0 END) FROM reviews WHERE run_id=%s GROUP BY run_id, status, reason", (run_id,))
         con.commit()
     print(f"published run {run_id}: {len(ranking)} issues, {n} review rows, memo status {memo['status']}")
 

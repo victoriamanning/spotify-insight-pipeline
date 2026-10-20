@@ -95,7 +95,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
       <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px">
         <h2 style="margin:0">Where the complaint burden sits (severity sum by area)</h2>
         <div class="seg" role="group" aria-label="Scope">
-          <button id="scopeAll" aria-pressed="true">All classified</button><button id="scopeSample" aria-pressed="false">100k sample only</button>
+          <button id="scopeAll" aria-pressed="true">All classified</button><button id="scopeSample" aria-pressed="false">Uniform 100k sample</button>
         </div>
       </div>
       <div id="areas"></div>
@@ -158,7 +158,7 @@ function renderHeader() {
     ["Rows ingested", fmt(ing.records), `${fmt(ing.distinct_nonempty_texts)} distinct texts`],
     ["Classified (completed)", fmt(q("completed")), `${(100 * q("completed") / ing.records).toFixed(1)}% of all rows · ${fmt(s.export?.cache_reuse_rows)} via exact-text reuse`],
     ["Quarantined", fmt(Object.entries(ex).filter(([k]) => k.startsWith("quarantined") && !k.includes("out_of_scope")).reduce((a, [, v]) => a + v, 0)), `${fmt(q("quarantined:empty_review_text"))} empty texts · ${fmt(q("quarantined:invalid_model_output"))} invalid output`],
-    ["Not classified (budget scope)", fmt(q("quarantined:out_of_scope_budget_sample")), "outside the 100k sample"],
+    ["Not classified (out of scope)", fmt(q("quarantined:out_of_scope_budget_sample")), "scope expanded from the 100k sample to the full corpus"],
     ["Complaint + cancellation", fmt(s.overall.complaint_or_cancellation_records), `${fmt(s.overall.cancellation_records)} with cancellation intent`],
     ["API spend", "$" + Number(s.spent_usd).toFixed(s.spent_usd < 1 ? 4 : 2), "all roles, measured usage x dated rates"],
   ];
@@ -283,7 +283,7 @@ function renderQuality() {
       <tr><th>Independent verifier</th><td>${v ? `${fmt(v.verified)} sampled texts · topic ${(100 * v.agreement.topic).toFixed(1)}% · intent ${(100 * v.agreement.intent).toFixed(1)}% · severity exact ${(100 * v.agreement.severity_exact).toFixed(1)}% (MAE ${v.severity_mae}) · planted errors caught ${v.planted_error_test.detected}/${v.planted_error_test.planted}` : "-"}</td></tr>
       <tr><th>Golden 50 (human, v1 official)</th><td>${g ? `topic ${(100 * g.topic_agreement).toFixed(0)}% · intent ${(100 * g.intent_agreement).toFixed(0)}% · severity exact ${(100 * g.severity_exact_agreement).toFixed(0)}% (MAE ${g.severity_mae_valid}) · ${g.ambiguous_cases} ambiguous` : "pending"}</td></tr>
       <tr><th>Golden 50 (v2, 8 labels revised after seeing output)</th><td>${s.golden_v2 ? `topic ${(100 * s.golden_v2.topic_agreement).toFixed(0)}% · intent ${(100 * s.golden_v2.intent_agreement).toFixed(0)}% · severity exact ${(100 * s.golden_v2.severity_exact_agreement).toFixed(0)}%` : "-"}</td></tr>
-      <tr><th>Distinct texts</th><td>${fmt(s.ingestion.scope.sample_distinct_texts_to_classify)} sent to the model for ${fmt(s.ingestion.scope.sample_reviews)} sampled reviews</td></tr>
+      <tr><th>Distinct texts</th><td>${fmt(s.ingestion.scope.distinct_texts_in_queue || s.ingestion.scope.sample_distinct_texts_to_classify)} distinct texts sent to the model (each once); identical texts reuse the saved result</td></tr>
     </tbody></table></div>
     <div><table><thead><tr><th>Role</th><th class="n">Calls</th><th class="n">Failed</th><th class="n">In tok</th><th class="n">Out tok</th><th class="n">USD</th></tr></thead><tbody>${Object.entries(calls).map(([k, c]) =>
       `<tr><td>${esc(k)}</td><td class="n">${fmt(c.n)}</td><td class="n">${fmt(c.fail)}</td><td class="n">${fmt(c.i)}</td><td class="n">${fmt(c.o)}</td><td class="n">${c.usd.toFixed(4)}</td></tr>`).join("")}</tbody></table>

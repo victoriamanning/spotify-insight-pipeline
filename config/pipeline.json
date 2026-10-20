@@ -13,10 +13,10 @@
   "budget": {
     "spend_cap_usd": 6.5,
     "stage_caps_usd": {
-      "enrich": 5.0,
-      "verify": 0.6,
-      "group": 0.2,
-      "memo": 0.4
+      "enrich": 6.15,
+      "verify": 0.15,
+      "group": 0.05,
+      "memo": 0.15
     },
     "max_minutes": 240
   },
@@ -62,7 +62,7 @@
       "prompt": "prompts/group_v1.md",
       "prompt_version": "group_v1",
       "examples_per_issue": 8,
-      "max_output_tokens": 4000
+      "max_output_tokens": 12000
     },
     "memo": {
       "provider": "openai",

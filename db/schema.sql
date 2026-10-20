@@ -46,6 +46,11 @@ CREATE TABLE IF NOT EXISTS reviews (
 );
 CREATE INDEX IF NOT EXISTS reviews_issue_idx ON reviews (run_id, issue_id, severity DESC, review_likes DESC);
 
+CREATE TABLE IF NOT EXISTS status_counts (       -- computed inside Postgres from the reviews table at publish time
+  run_id text REFERENCES runs(run_id) ON DELETE CASCADE,
+  status text, reason text, n integer, cache_reused integer
+);
+
 CREATE TABLE IF NOT EXISTS recommendations (
   run_id text PRIMARY KEY REFERENCES runs(run_id) ON DELETE CASCADE,
   label_config text, status text, memo jsonb NOT NULL, evidence_pack jsonb NOT NULL, validation_errors jsonb

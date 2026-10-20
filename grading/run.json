@@ -18,6 +18,9 @@
     "out_of_sample_rows_reusing_a_sample_text": 137942,
     "rows_out_of_scope": 422667,
     "ordering": "golden_50 -> checkpoint_500 -> analysis_10000 -> SHA-256(seed:review_id) ascending",
-    "seed": "berkeley-fall-2026-assignment-5-v1"
+    "seed": "berkeley-fall-2026-assignment-5-v1",
+    "expanded_to_full_corpus_at": "2026-10-20T06:22:54.954+00:00",
+    "expansion_note": "Scope expanded from the 100k sample to every distinct nonempty text after budget allowed; remaining texts queued in the same seeded order; sample_only/ aggregates keep the uniform 100k view.",
+    "distinct_texts_in_queue": 484189
   }
 }

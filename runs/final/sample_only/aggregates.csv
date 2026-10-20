@@ -1,41 +1,41 @@
 issue_id,name,complaint_count,severity_sum,mean_severity,priority_score,cancellation_records,severity_4_or_5,needs_review,cache_reused_rows
-billing.free_tier_limits,Free-Tier Listening Restrictions,8372,23261,2.778428,23261,1832,63,321,10
-other.general,General App Praise or Criticism,10277,20575,2.002043,20575,675,3,1055,4028
-usability.ads,Too Many Interrupting Ads,5677,12826,2.259292,12826,447,6,317,423
+billing.free_tier_limits,Free Tier Playback Restrictions,8372,23261,2.778428,23261,1832,63,321,10
+other.general,General Dissatisfaction With Spotify,10277,20575,2.002043,20575,675,3,1055,4028
+usability.ads,Too Many or Long Ads,5677,12826,2.259292,12826,447,6,317,423
 playback.stops_skips,"Music Stops, Skips, or Won't Play",2646,8460,3.197279,8460,302,524,147,2
-usability.ui_redesign,Disliked Update or Interface Changes,3588,7635,2.127926,7635,696,21,190,288
+usability.ui_redesign,Disliked App Update or New Layout,3588,7635,2.127926,7635,696,21,190,288
 access.login_failure,Unable to Log In,1115,4353,3.904036,4353,79,987,66,10
 usability.library_playlists,Playlist and Library Management Problems,1288,3901,3.028727,3901,158,110,53,0
-playback.crash_wont_open,App Crashes or Won't Open,1041,3811,3.660903,3811,83,690,35,4
-usability.shuffle_autoplay,Unwanted Shuffle or Autoplay Behavior,1142,3311,2.899299,3311,141,5,43,1
-usability.navigation_controls,"Navigation, Controls, and Widget Problems",1081,2930,2.710453,2930,117,16,56,0
+playback.crash_wont_open,"App Crashes, Freezes, or Won't Open",1041,3811,3.660903,3811,83,690,35,4
+usability.shuffle_autoplay,Shuffle or Autoplay Plays Wrong Songs,1142,3311,2.899299,3311,141,5,43,1
+usability.navigation_controls,Hard-to-Find or Missing Controls,1081,2930,2.710453,2930,117,16,56,0
 catalog.missing_content,Songs or Artists Missing,881,2597,2.947787,2597,85,8,70,3
 catalog.lyrics,Lyrics Missing or Not Loading,756,2231,2.951058,2231,32,1,41,4
-playback.device_integration,"Bluetooth, Car, or Device Integration Issues",670,2066,3.083582,2066,110,73,20,0
-playback.connection_error,False Offline or Connection Errors,572,1873,3.274476,1873,34,160,58,0
-playback.other,Other Playback or App Glitches,602,1812,3.009967,1812,38,115,92,17
-catalog.recommendations,Unwanted or Repetitive Recommendations,540,1468,2.718519,1468,48,0,26,0
-playback.lag_slow,Slow or Laggy App,446,1336,2.995516,1336,39,21,28,2
-billing.premium_not_working,Premium Subscription Not Recognized,334,1197,3.583832,1197,31,125,41,0
-playback.audio_quality,Poor or Glitchy Audio Quality,354,1002,2.830508,1002,34,6,26,2
-downloads.offline_mode,Downloaded Music Fails Offline,312,984,3.153846,984,22,50,13,1
-billing.other,Other Subscription and Billing Problems,408,962,2.357843,962,26,16,72,8
-billing.price,Premium Costs Too Much,438,913,2.084475,913,63,0,32,3
+playback.device_integration,Problems Connecting to Other Devices,670,2066,3.083582,2066,110,73,20,0
+playback.connection_error,Connection Errors Despite Internet Access,572,1873,3.274476,1873,34,160,58,0
+playback.other,Other Playback Bugs,602,1812,3.009967,1812,38,115,92,17
+catalog.recommendations,Repetitive or Poor Recommendations,540,1468,2.718519,1468,48,0,26,0
+playback.lag_slow,App Is Slow or Laggy,446,1336,2.995516,1336,39,21,28,2
+billing.premium_not_working,Paid Premium Benefits Not Activating,334,1197,3.583832,1197,31,125,41,0
+playback.audio_quality,Poor Sound Quality or Volume,354,1002,2.830508,1002,34,6,26,2
+downloads.offline_mode,Offline Music Won't Play,312,984,3.153846,984,22,50,13,1
+billing.other,Other Subscription and Payment Problems,408,962,2.357843,962,26,16,72,8
+billing.price,Premium Too Expensive,438,913,2.084475,913,63,0,32,3
 downloads.cannot_download,Unable to Download Music,274,832,3.036496,832,9,22,25,4
-catalog.search,Search Fails to Find the Right Music,236,712,3.016949,712,12,14,22,0
-downloads.downloads_disappear,Downloaded Music Disappears,194,622,3.206186,622,15,39,4,0
-usability.other,Other Usability and Feature Concerns,261,609,2.333333,609,49,3,30,1
-catalog.other,Other Catalog and Content Problems,238,605,2.542017,605,16,1,36,1
+catalog.search,Search Fails to Find Songs,236,712,3.016949,712,12,14,22,0
+downloads.downloads_disappear,Downloaded Music Keeps Disappearing,194,622,3.206186,622,15,39,4,0
+usability.other,Other Usability and Feature Complaints,261,609,2.333333,609,49,3,30,1
+catalog.other,Other Music Catalog Problems,238,605,2.542017,605,16,1,36,1
 billing.unwanted_charge,Unexpected or Duplicate Charges,118,576,4.881356,576,21,112,9,0
 catalog.podcasts_audiobooks,Podcast and Audiobook Problems,180,513,2.850000,513,9,9,8,0
-playback.battery_resources,"High Battery, Data, or Storage Use",166,492,2.963855,492,17,4,18,0
+playback.battery_resources,"Excessive Battery, Data, or Storage Use",166,492,2.963855,492,17,4,18,0
 access.account_management,Account Recovery and Management Problems,116,399,3.439655,399,12,50,18,0
-other.other,Other Unspecified App Concerns,151,363,2.403974,363,24,12,72,5
-access.signup,Unable to Sign Up or Verify Number,79,285,3.607595,285,2,48,7,0
-other.unrelated,Unrelated or Unsupported Feedback,129,260,2.015504,260,75,0,60,0
-access.account_hacked,Account Hacked or Taken Over,56,258,4.607143,258,6,48,7,0
+other.other,Miscellaneous Product Complaints,151,363,2.403974,363,24,12,72,5
+access.signup,Unable to Sign Up or Verify,79,285,3.607595,285,2,48,7,0
+other.unrelated,Unrelated Complaints and Boycott Statements,129,260,2.015504,260,75,0,60,0
+access.account_hacked,Account Hacked or Used Without Permission,56,258,4.607143,258,6,48,7,0
 access.other,Other Account Access Problems,41,135,3.292683,135,3,18,12,0
-support.unhelpful,Support Replies Don't Resolve Problems,48,121,2.520833,121,5,0,3,0
-downloads.other,Other Download Management Problems,33,91,2.757576,91,1,0,2,0
-support.no_response,Support Unreachable or Unresponsive,25,71,2.840000,71,5,1,5,0
+support.unhelpful,Support Does Not Resolve Problems,48,121,2.520833,121,5,0,3,0
+downloads.other,Download Storage and Settings Problems,33,91,2.757576,91,1,0,2,0
+support.no_response,Support Does Not Respond,25,71,2.840000,71,5,1,5,0
 support.other,Other Customer Support Problems,8,16,2.000000,16,0,0,2,0

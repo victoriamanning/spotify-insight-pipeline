@@ -1,21 +1,21 @@
 {
   "run_id": "final",
-  "finished_at": "2026-10-20T06:16:58.531+00:00",
+  "finished_at": "2026-10-20T16:27:35.075+00:00",
   "stages": [
     "export"
   ],
   "stage_seconds": {
-    "export": 14.134
+    "export": 37.149
   },
-  "wall_clock_s": 14.14,
+  "wall_clock_s": 38.264,
   "provider": "openai",
   "spend_cap_usd": 6.5,
-  "spent_usd_total": 1.680936,
+  "spent_usd_total": 5.948157,
   "calls_by_role_outcome": [
     {
       "role": "enrich",
       "outcome": "failed",
-      "n": 9,
+      "n": 12,
       "i": 22850,
       "ci": 13909,
       "o": 30610,
@@ -24,43 +24,43 @@
     {
       "role": "enrich",
       "outcome": "succeeded",
-      "n": 1865,
-      "i": 5737527,
-      "ci": 3716761,
-      "o": 2806097,
-      "usd": 1.64229271
+      "n": 10007,
+      "i": 32762144,
+      "ci": 19919399,
+      "o": 17228529,
+      "usd": 5.88119829
     },
     {
       "role": "group",
       "outcome": "succeeded",
-      "n": 1,
-      "i": 13512,
-      "ci": 0,
-      "o": 3494,
-      "usd": 0.0030982
+      "n": 4,
+      "i": 53952,
+      "ci": 26954,
+      "o": 15948,
+      "usd": 0.01094334
     },
     {
       "role": "memo",
       "outcome": "succeeded",
-      "n": 5,
-      "i": 16572,
-      "ci": 0,
-      "o": 5583,
-      "usd": 0.0044487
+      "n": 10,
+      "i": 34950,
+      "ci": 3675,
+      "o": 11372,
+      "usd": 0.00885025
     },
     {
       "role": "verify",
       "outcome": "succeeded",
-      "n": 63,
-      "i": 64054,
+      "n": 131,
+      "i": 136870,
       "ci": 0,
-      "o": 16705,
-      "usd": 0.014757900000000001
+      "o": 34280,
+      "usd": 0.030827
     }
   ],
   "queue_status": {
-    "completed": 78098,
-    "quarantined": 1
+    "completed": 484182,
+    "quarantined": 7
   },
   "enrich": null
 }

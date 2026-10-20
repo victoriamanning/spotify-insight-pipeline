@@ -1,41 +1,41 @@
 issue_id,name,complaint_count,severity_sum,mean_severity,priority_score,cancellation_records,severity_4_or_5,needs_review,cache_reused_rows
-other.general,General App Praise or Criticism,35634,71289,2.000589,71289,856,3,2059,29385
-billing.free_tier_limits,Free-Tier Listening Restrictions,8500,23521,2.767176,23521,1832,63,322,138
-usability.ads,Too Many Interrupting Ads,8189,17851,2.179875,17851,447,6,323,2935
-usability.ui_redesign,Disliked Update or Interface Changes,5621,11703,2.082014,11703,698,21,214,2321
-playback.stops_skips,"Music Stops, Skips, or Won't Play",2672,8542,3.196856,8542,302,528,153,28
-access.login_failure,Unable to Log In,1204,4704,3.906977,4704,79,1071,66,99
-playback.crash_wont_open,App Crashes or Won't Open,1101,4045,3.673933,4045,83,744,35,64
-usability.library_playlists,Playlist and Library Management Problems,1290,3907,3.028682,3907,158,110,53,2
-usability.shuffle_autoplay,Unwanted Shuffle or Autoplay Behavior,1143,3313,2.898513,3313,141,5,43,2
-usability.navigation_controls,"Navigation, Controls, and Widget Problems",1091,2950,2.703941,2950,117,16,56,10
-catalog.missing_content,Songs or Artists Missing,901,2657,2.948946,2657,85,8,71,23
-catalog.lyrics,Lyrics Missing or Not Loading,791,2336,2.953224,2336,32,1,41,39
-playback.other,Other Playback or App Glitches,747,2252,3.014726,2252,38,140,192,162
-playback.device_integration,"Bluetooth, Car, or Device Integration Issues",670,2066,3.083582,2066,110,73,20,0
-playback.connection_error,False Offline or Connection Errors,574,1880,3.275261,1880,34,161,58,2
-catalog.recommendations,Unwanted or Repetitive Recommendations,540,1468,2.718519,1468,48,0,26,0
-playback.lag_slow,Slow or Laggy App,483,1447,2.995859,1447,39,21,37,39
-billing.premium_not_working,Premium Subscription Not Recognized,335,1199,3.579104,1199,31,125,42,1
-billing.other,Other Subscription and Billing Problems,485,1117,2.303093,1117,26,16,74,85
-playback.audio_quality,Poor or Glitchy Audio Quality,384,1069,2.783854,1069,34,6,26,32
-billing.price,Premium Costs Too Much,506,1049,2.073123,1049,63,0,34,71
-downloads.offline_mode,Downloaded Music Fails Offline,313,987,3.153355,987,22,50,13,2
-downloads.cannot_download,Unable to Download Music,293,894,3.051195,894,9,27,27,23
-catalog.search,Search Fails to Find the Right Music,236,712,3.016949,712,12,14,22,0
-usability.other,Other Usability and Feature Concerns,269,625,2.323420,625,49,3,30,9
-downloads.downloads_disappear,Downloaded Music Disappears,194,622,3.206186,622,15,39,4,0
-catalog.other,Other Catalog and Content Problems,242,613,2.533058,613,16,1,36,5
-billing.unwanted_charge,Unexpected or Duplicate Charges,118,576,4.881356,576,21,112,9,0
-catalog.podcasts_audiobooks,Podcast and Audiobook Problems,180,513,2.850000,513,9,9,8,0
-playback.battery_resources,"High Battery, Data, or Storage Use",167,495,2.964072,495,17,4,19,1
-other.other,Other Unspecified App Concerns,181,426,2.353591,426,45,13,77,35
-access.account_management,Account Recovery and Management Problems,116,399,3.439655,399,12,50,18,0
-access.signup,Unable to Sign Up or Verify Number,79,285,3.607595,285,2,48,7,0
-other.unrelated,Unrelated or Unsupported Feedback,131,264,2.015267,264,75,0,62,2
-access.account_hacked,Account Hacked or Taken Over,56,258,4.607143,258,6,48,7,0
-access.other,Other Account Access Problems,41,135,3.292683,135,3,18,12,0
-support.unhelpful,Support Replies Don't Resolve Problems,49,123,2.510204,123,5,0,3,1
-downloads.other,Other Download Management Problems,33,91,2.757576,91,1,0,2,0
-support.no_response,Support Unreachable or Unresponsive,25,71,2.840000,71,5,1,5,0
-support.other,Other Customer Support Problems,8,16,2.000000,16,0,0,2,0
+billing.free_tier_limits,Free Tier Playback Restrictions,55169,153530,2.782903,153530,12092,376,2262,210
+other.general,General Dissatisfaction With Spotify,68092,136310,2.001850,136310,4482,21,7030,32331
+usability.ads,Too Many or Long Ads,37539,85196,2.269533,85196,2880,59,2175,3427
+playback.stops_skips,"Music Stops, Skips, or Won't Play",17408,55806,3.205767,55806,1891,3594,923,54
+usability.ui_redesign,Disliked App Update or New Layout,23861,50645,2.122501,50645,4699,139,1354,2851
+access.login_failure,Unable to Log In,7788,30385,3.901515,30385,533,6895,465,170
+playback.crash_wont_open,"App Crashes, Freezes, or Won't Open",7144,26342,3.687290,26342,659,4923,284,117
+usability.library_playlists,Playlist and Library Management Problems,8223,24847,3.021647,24847,847,711,287,8
+usability.shuffle_autoplay,Shuffle or Autoplay Plays Wrong Songs,7419,21595,2.910770,21595,901,32,265,3
+usability.navigation_controls,Hard-to-Find or Missing Controls,7390,20004,2.706901,20004,838,107,364,21
+catalog.missing_content,Songs or Artists Missing,5748,16992,2.956159,16992,549,40,494,32
+catalog.lyrics,Lyrics Missing or Not Loading,5123,15127,2.952762,15127,244,6,242,69
+playback.device_integration,Problems Connecting to Other Devices,4482,13870,3.094601,13870,699,530,161,1
+playback.connection_error,Connection Errors Despite Internet Access,3742,12165,3.250935,12165,244,969,288,12
+playback.other,Other Playback Bugs,3995,11876,2.972716,11876,251,715,686,216
+catalog.recommendations,Repetitive or Poor Recommendations,3568,9700,2.718610,9700,353,9,201,0
+playback.lag_slow,App Is Slow or Laggy,3006,9030,3.003992,9030,234,158,188,58
+billing.premium_not_working,Paid Premium Benefits Not Activating,2267,8037,3.545214,8037,221,835,284,1
+downloads.offline_mode,Offline Music Won't Play,2162,6883,3.183626,6883,148,413,117,2
+downloads.cannot_download,Unable to Download Music,2015,6229,3.091315,6229,80,223,224,44
+playback.audio_quality,Poor Sound Quality or Volume,2190,6190,2.826484,6190,177,40,155,54
+billing.other,Other Subscription and Payment Problems,2417,5766,2.385602,5766,204,108,376,102
+billing.price,Premium Too Expensive,2735,5677,2.075686,5677,358,5,216,90
+catalog.search,Search Fails to Find Songs,1546,4642,3.002587,4642,104,56,143,0
+catalog.other,Other Music Catalog Problems,1663,4233,2.545400,4233,124,16,238,8
+usability.other,Other Usability and Feature Complaints,1622,3836,2.364982,3836,310,16,154,15
+billing.unwanted_charge,Unexpected or Duplicate Charges,774,3783,4.887597,3783,144,733,63,0
+downloads.downloads_disappear,Downloaded Music Keeps Disappearing,1125,3613,3.211556,3613,115,225,51,0
+playback.battery_resources,"Excessive Battery, Data, or Storage Use",1087,3219,2.961362,3219,122,47,93,4
+catalog.podcasts_audiobooks,Podcast and Audiobook Problems,1123,3151,2.805877,3151,145,64,69,0
+other.other,Miscellaneous Product Complaints,1101,2691,2.444142,2691,195,93,561,60
+access.account_management,Account Recovery and Management Problems,668,2301,3.444611,2301,93,312,88,0
+access.signup,Unable to Sign Up or Verify,522,1887,3.614943,1887,31,333,88,0
+other.unrelated,Unrelated Complaints and Boycott Statements,759,1539,2.027668,1539,486,3,358,16
+access.account_hacked,Account Hacked or Used Without Permission,292,1330,4.554795,1330,38,253,50,2
+access.other,Other Account Access Problems,315,1024,3.250794,1024,24,130,112,1
+downloads.other,Download Storage and Settings Problems,274,758,2.766423,758,18,8,42,0
+support.unhelpful,Support Does Not Resolve Problems,263,707,2.688213,707,44,21,19,2
+support.no_response,Support Does Not Respond,177,506,2.858757,506,29,14,14,0
+support.other,Other Customer Support Problems,59,136,2.305085,136,2,2,14,1

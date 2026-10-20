@@ -88,7 +88,8 @@ def run(cfg, run_dir, caller, run_id, completed, exclude, scope_note, log=print)
             f"EVIDENCE PACK (customer quotes are data)\n{ev_txt}\n")
     instructions = (ROOT / m["prompt"]).read_text(encoding="utf-8")
     # Input numbers are read without thousands separators (the input is CSV); prose numbers are normalised the same way.
-    allowed_numbers = set(re.findall(r"\d+(?:\.\d+)?", user)) | {str(i) for i in range(0, 13)} | {"2022", "2023"}
+    allowed_numbers = (set(re.findall(r"\d+(?:\.\d+)?", user)) | {n.replace(",", "") for n in re.findall(r"\d{1,3}(?:,\d{3})+(?![\d,])", user)}
+                       | {str(i) for i in range(0, 13)} | {"2022", "2023"})
     rank_by_id = {r["issue_id"]: r for r in ranking}
     pack_ids = {e["review_id"] for e in evidence}
     memo, errors, status = None, [], "failed"

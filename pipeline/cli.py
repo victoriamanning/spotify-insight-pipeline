@@ -38,13 +38,22 @@ def make_caller(cfg, run_dir, provider, fault_plan=None):
 
 
 def scope_note(run_dir):
+    """Coverage computed from the current state (not the ingest-time scope), so it stays true after scope changes."""
     con = db.connect(Path(run_dir) / "state.sqlite")
     rep = db.get_meta(con, "ingestion_report")
     s = rep["scope"]
-    return (f"{rep['records']} source rows ingested ({rep['empty_review_text']} empty texts quarantined). Classification scope: a uniform "
-            f"seeded sample of {s['sample_reviews']} reviews ({s['sample_distinct_texts_to_classify']} distinct texts); "
-            f"{s['out_of_sample_rows_reusing_a_sample_text']} further rows reuse an identical classified text; "
-            f"{s['rows_out_of_scope']} rows were not classified (budget scope). Historical self-selected Google Play reviews, "
+    lc = s["label_config"]
+    w = {r["status"]: r["n"] for r in con.execute("SELECT status, COUNT(*) n FROM work WHERE label_config=? GROUP BY status", (lc,))}
+    rows_done = con.execute("SELECT COUNT(*) FROM reviews r JOIN work w ON w.text_sha256=r.text_sha256 AND w.label_config=? "
+                            "WHERE r.is_empty=0 AND w.status='completed'", (lc,)).fetchone()[0]
+    nonempty = rep["nonempty_reviews"]
+    expanded = "expanded_to_full_corpus_at" in s
+    how = ("the queue started with a uniform seeded 100,000-review sample and was then expanded to every distinct nonempty text"
+           if expanded else f"a uniform seeded sample of {s['sample_reviews']} reviews")
+    return (f"{rep['records']} source rows ingested; {rep['empty_review_text']} empty texts quarantined. Classification: {how}; "
+            f"{w.get('completed', 0)} of {sum(w.values())} distinct texts completed, {w.get('quarantined', 0)} quarantined after retries, "
+            f"{w.get('pending', 0) + w.get('submitted', 0)} unfinished; {rows_done} of {nonempty} nonempty rows classified "
+            f"(identical texts reuse one saved result). Historical self-selected Google Play reviews, "
             f"{rep['first_review'][:10]} to {rep['last_review'][:10]}.")
 
 

@@ -2,19 +2,19 @@
   "phase": "resume",
   "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
   "stats": {
-    "batches_done": 1393,
-    "completed": 64091,
-    "quarantined": 1,
-    "retried": 240,
-    "fallback": 56,
-    "failed_calls": 1
+    "batches_done": 23,
+    "completed": 899,
+    "quarantined": 6,
+    "retried": 0,
+    "fallback": 5,
+    "failed_calls": 0
   },
   "queue_status": {
-    "completed": 78098,
-    "quarantined": 1
+    "completed": 484182,
+    "quarantined": 7
   },
   "stop_reason": "queue drained",
-  "wall_clock_s": 2421.945,
-  "spent_usd_total": 1.658631,
-  "finished_at": "2026-10-20T06:07:39.381+00:00"
+  "wall_clock_s": 89.314,
+  "spent_usd_total": 5.919841,
+  "finished_at": "2026-10-20T15:58:37.744+00:00"
 }

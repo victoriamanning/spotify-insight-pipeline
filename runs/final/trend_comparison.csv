@@ -1,9 +1,9 @@
 period,classified_reviews,area,complaints,share_pct
-baseline_2022-06_to_2023-05,124714,access,614,0.5
-baseline_2022-06_to_2023-05,124714,usability,7518,6.0
-baseline_2022-06_to_2023-05,124714,playback,4309,3.5
-baseline_2022-06_to_2023-05,124714,billing_support,2399,1.9
-recent_2023-08_to_2023-10,48906,access,498,1.0
-recent_2023-08_to_2023-10,48906,usability,6627,13.6
-recent_2023-08_to_2023-10,48906,playback,1278,2.6
-recent_2023-08_to_2023-10,48906,billing_support,5566,11.4
+baseline_2022-06_to_2023-05,337252,access,4054,1.2
+baseline_2022-06_to_2023-05,337252,usability,39894,11.8
+baseline_2022-06_to_2023-05,337252,playback,27301,8.1
+baseline_2022-06_to_2023-05,337252,billing_support,15365,4.6
+recent_2023-08_to_2023-10,161170,access,3109,1.9
+recent_2023-08_to_2023-10,161170,usability,29755,18.5
+recent_2023-08_to_2023-10,161170,playback,8031,5.0
+recent_2023-08_to_2023-10,161170,billing_support,35343,21.9

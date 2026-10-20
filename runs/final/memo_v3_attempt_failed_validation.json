@@ -1,0 +1,333 @@
+{
+  "label_config": "gpt-6-luna@low+memo_v3+json_v1",
+  "status": "failed_validation",
+  "validation_errors": [
+    "number 100,000 in prose is not in the supplied aggregates",
+    "number 20 in prose is not in the supplied aggregates"
+  ],
+  "memo": {
+    "priority_area": "billing_support",
+    "headline": "Prioritize billing/support, starting with free-tier restrictions",
+    "recommendation": "Baseline issue ranking is: 1) billing.free_tier_limits, priority_score 153530 [C1]; 2) other.general, 136310 [C2]; 3) usability.ads, 85196 [C3]; 4) playback.stops_skips, 55806 [C4]. Do not treat other.general as a product fix: it is non-specific feedback, with 68092 complaints [C5]. Start with billing.free_tier_limits: billing_support’s complaint share rose from 4.6% in the baseline to 21.9% in the most recent complete months, the largest current share and increase among the focus areas. This spike is review evidence, not proof of cause. The issue is also the top baseline issue; customer quotes mention restrictions on skips and lyrics. The recent volume and growth make it the best next-quarter focus, while the high baseline score reinforces that choice.",
+    "first_issues": [
+      "billing.free_tier_limits"
+    ],
+    "alternatives": [
+      {
+        "area": "usability",
+        "why_lower": "Usability remains a substantial alternative: its complaint share increased from 11.8% to 18.5%, and usability.ads ranks third in the baseline at 85196 [C3]. But billing_support’s recent share is higher, and usability’s increase is smaller. Address ads and UI complaints after the billing/support spike."
+      },
+      {
+        "area": "playback",
+        "why_lower": "Playback’s complaint share fell from 8.1% to 5.0%. playback.stops_skips ranks fourth at 55806 [C4], and the playback area has 10976 severity-4-or-5 records, so reliability issues remain serious. The higher-ranked free-tier and ad issues call for billing/support and usability work; playback should follow unless service monitoring indicates an urgent reliability problem."
+      },
+      {
+        "area": "access",
+        "why_lower": "Access has the highest area mean severity (3.852582) and 7923 severity-4-or-5 records, but its recent complaint share is 1.9%, below its 1.2% baseline only in relative terms? Its share rose from 1.2% to 1.9%, but current volume remains lower than billing_support and usability. access.login_failure is a serious targeted issue, not the strongest overall next-quarter focus."
+      }
+    ],
+    "limitations": [
+      "These are self-selected historical Google Play reviews from 2022-05-17 to 2023-11-15, not a representative measure of all users.",
+      "The classification queue began with a uniform seeded 100,000-review sample and expanded to distinct nonempty texts; 20 nonempty rows were unclassified, and 13 empty texts were quarantined.",
+      "Model labels can be wrong; identical texts reuse saved results.",
+      "Cancellation language is expressed intent, not observed churn.",
+      "No revenue data is available."
+    ],
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "billing.free_tier_limits",
+        "metric": "priority_score",
+        "value": "153530"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "other.general",
+        "metric": "priority_score",
+        "value": "136310"
+      },
+      {
+        "claim_id": "C3",
+        "issue_id": "usability.ads",
+        "metric": "priority_score",
+        "value": "85196"
+      },
+      {
+        "claim_id": "C4",
+        "issue_id": "playback.stops_skips",
+        "metric": "priority_score",
+        "value": "55806"
+      },
+      {
+        "claim_id": "C5",
+        "issue_id": "other.general",
+        "metric": "complaint_count",
+        "value": "68092"
+      }
+    ],
+    "cited_review_ids": [
+      "9857dc61-331a-4e0d-b6d7-8e2445097170",
+      "40e7479a-4547-4936-ba92-c2711aa7037e",
+      "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+      "6c69cfac-4d7d-4756-a1b8-f0594a19b793",
+      "aa536e21-6364-4294-b77e-6acebdb4fef8"
+    ]
+  },
+  "evidence_pack": [
+    {
+      "issue_id": "billing.free_tier_limits",
+      "review_id": "f524e032-145f-4584-9d86-cab4b1c97a7e",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "Uninstalling."
+    },
+    {
+      "issue_id": "billing.free_tier_limits",
+      "review_id": "9857dc61-331a-4e0d-b6d7-8e2445097170",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "why the hell do we have to pay for premium just to read the lyrics?!"
+    },
+    {
+      "issue_id": "billing.free_tier_limits",
+      "review_id": "40e7479a-4547-4936-ba92-c2711aa7037e",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "limit the skips of songs"
+    },
+    {
+      "issue_id": "other.general",
+      "review_id": "8ead8dfb-78bc-45e8-82d2-953ea2870b87",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "A company that does that doesn't deserve any money from Android users."
+    },
+    {
+      "issue_id": "other.general",
+      "review_id": "e09e6eff-dc53-4cfb-82d5-179ea8d89a75",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "Hate A application"
+    },
+    {
+      "issue_id": "other.general",
+      "review_id": "ca56c13e-abd3-46fe-99fe-6fe6adfe9bb0",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "Bad application👎"
+    },
+    {
+      "issue_id": "usability.ads",
+      "review_id": "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "there are now so many irrelevant ads."
+    },
+    {
+      "issue_id": "usability.ads",
+      "review_id": "f7ccd28b-4083-4d9b-9833-d6899fe9244e",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "the ads have started playing after 2 songs"
+    },
+    {
+      "issue_id": "usability.ads",
+      "review_id": "502db020-81c2-4102-8e8b-c72063d7b2c1",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "now, its 3 ads per 2 or 3 songs"
+    },
+    {
+      "issue_id": "playback.stops_skips",
+      "review_id": "6c69cfac-4d7d-4756-a1b8-f0594a19b793",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "the songs have been abruptly cut"
+    },
+    {
+      "issue_id": "playback.stops_skips",
+      "review_id": "f5f141ad-b86c-4b23-b17c-e87a8ec24fc8",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "Sometimes the song stops and doesn't start radio"
+    },
+    {
+      "issue_id": "playback.stops_skips",
+      "review_id": "205e4cbe-a19e-41ae-bff4-ef9a3804e2a4",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "it ends up playing a different song."
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "review_id": "830060e9-e332-4551-bc50-a92e374a1b78",
+      "severity": 2,
+      "intent": "cancellation",
+      "quote": "idk if I'll reinstall spotify"
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "review_id": "58c19359-5b3e-4cd9-9246-80f23052c011",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "The user interface changes feel counterintuitive, making it harder to navigate my music library."
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "review_id": "99e403b0-3a69-4a4a-a381-7a13f3f5a167",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "Latest Android update completely revamped the home UI"
+    },
+    {
+      "issue_id": "access.login_failure",
+      "review_id": "aa536e21-6364-4294-b77e-6acebdb4fef8",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "it keeps showing incorrect password"
+    },
+    {
+      "issue_id": "access.login_failure",
+      "review_id": "77f29c25-d52e-4380-997c-77022d5ddcf1",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "I was logged out of my account"
+    },
+    {
+      "issue_id": "access.login_failure",
+      "review_id": "2ad365af-f315-4194-972f-2039539d5a53",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "I need to log in each and every time"
+    },
+    {
+      "issue_id": "playback.crash_wont_open",
+      "review_id": "16b56070-d2d6-47b9-92f0-bf4b1310dc44",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "it'll just crash and force me to reopen the app and restart the music"
+    },
+    {
+      "issue_id": "playback.crash_wont_open",
+      "review_id": "a4d92305-f66b-4dc7-b912-bf3e37496f02",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "the application out of nowhere exits itself"
+    },
+    {
+      "issue_id": "playback.crash_wont_open",
+      "review_id": "cbb4854f-d06b-4dfb-a7bd-7e1c0b3fe2af",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "The app keeps crashing."
+    },
+    {
+      "issue_id": "usability.library_playlists",
+      "review_id": "e963a719-857e-4728-ad0e-622b5f589a7a",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "Recent update removed the ability to sort songs from oldest to most recent."
+    },
+    {
+      "issue_id": "usability.library_playlists",
+      "review_id": "3b21d043-b0f5-4b80-ad18-d2d358875338",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "There's no queue option now."
+    },
+    {
+      "issue_id": "usability.library_playlists",
+      "review_id": "6c57fe30-f190-41ce-b281-2f4219edf6af",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "my playlists have stopped opening."
+    },
+    {
+      "issue_id": "usability.shuffle_autoplay",
+      "review_id": "18d946c0-4f14-47af-b08b-6eeb7b9e1945",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "It plays someother songs"
+    },
+    {
+      "issue_id": "usability.shuffle_autoplay",
+      "review_id": "a26bc295-4785-453e-b57e-987195a725f6",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "Instead, it plays a different song"
+    },
+    {
+      "issue_id": "usability.shuffle_autoplay",
+      "review_id": "d1f7af67-507d-4b30-a0ed-b3452be81392",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "I hate when it plays a song that isnt on my playlist"
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "review_id": "2dd0985f-25bf-4db8-aa25-f4f904f27080",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "the option to access Spotify Canvas doesn't appear under the settings for me."
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "review_id": "67e8d588-acb6-4247-baa7-fb4f6a7b1095",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "the song scroller has disappeared"
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "review_id": "4df8b195-0efe-4f85-920c-0995442f5da7",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "I cannot put songs on loop, i cannot replay same song, i cannot rewind it"
+    },
+    {
+      "issue_id": "catalog.missing_content",
+      "review_id": "85d052b5-9fa5-491c-bce4-a86ec2d5b44d",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "this song is not available"
+    },
+    {
+      "issue_id": "catalog.missing_content",
+      "review_id": "1b4a3301-02f3-4a68-8bcb-4f093aba7747",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "many songs are being taken off!"
+    },
+    {
+      "issue_id": "catalog.missing_content",
+      "review_id": "11408128-df7d-4b67-9979-259599c20980",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "My favorite album songs have vanished"
+    },
+    {
+      "issue_id": "catalog.lyrics",
+      "review_id": "e184d1fd-1126-469b-bdf2-91c30e164093",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "the lyrics are never shown for any of them."
+    },
+    {
+      "issue_id": "catalog.lyrics",
+      "review_id": "4923c55b-1c99-4b11-884a-9ec967819ce9",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "lyrics being unavailable for most of the songs"
+    },
+    {
+      "issue_id": "catalog.lyrics",
+      "review_id": "bb90105c-48c4-4d81-800d-69b7ece4696a",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "I still don't see them even though I have Premium."
+    }
+  ],
+  "input_sha256": "9c38d240d0f8711afaee9700c4f39647c5e04e211d9a60f1166168e4a16b0ed9",
+  "reused_saved_output": false,
+  "runtime_s": 27.241
+}

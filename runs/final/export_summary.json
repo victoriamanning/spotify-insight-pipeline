@@ -1,22 +1,21 @@
 {
   "records": 660622,
   "status_counts": {
-    "quarantined:out_of_scope_budget_sample": 422667,
-    "completed": 237941,
+    "completed": 660602,
     "quarantined:empty_review_text": 13,
-    "quarantined:invalid_model_output": 1
+    "quarantined:invalid_model_output": 7
   },
-  "calls": 1943,
-  "cache_reuse_rows": 159843,
+  "calls": 10164,
+  "cache_reuse_rows": 176420,
   "files": {
-    "calls.jsonl": "e7ad25ad04cf43032811721a9f77a2d831da734f239e70666f591115d58d0849",
+    "calls.jsonl": "4ace4b82ac0ee9879c8861f41f022eee14dbc1c7826856d821a723614e8c8bf2",
     "checkpoint_after.json": "9b05d19e50963a531fdcb6d3511aa4896fc8165c1ea4ad03b2518ade57909a62",
     "checkpoint_before.json": "4ed4e9dc6f0bd062ac823953e20f3eac43cd97f74cfae33cefbe43cfeb376adc",
-    "claims.csv": "ffeeb1b3f578a63b8d8147f35a1ec2603a9323b7569d460f8e7506bcd9e76eb6",
+    "claims.csv": "ab33eb77dca515024ac4ba869cbabf3ce0dca5bdbe60f3722abbc08acc0ab5d1",
     "ingestion.json": "5512dd793b0bde3bd51f28b20b440108f3c9bab31233819bea5f32ce19482153",
-    "membership.csv": "43d04018d0b5a1e138c0566b39bc11c132ee1d390673eedae61c5407a6d4c89b",
-    "ranking.csv": "7a2fff83d8d4ba7267ca1830805318e3bbda88cce745e24637cb3b5fb36abf2f",
-    "records.jsonl.gz": "fb58cceb831d3a7f168fd157ccbe4c99fb435638defe5a884ad6b7b9f29c78af",
-    "run.json": "15061411a3f4173f39d0bc68ca28fa4745803dc594af2c733990389ab0dd3ae1"
+    "membership.csv": "db08db9bed753eaba19153262ffb9205e2d5488b921ffc4e1eeab76901f5347f",
+    "ranking.csv": "39ded49669ff36426517f0f1c9318feeb1fffa10fc3279e250a112a62273ae36",
+    "records.jsonl.gz": "5487d021703faed13652aeeb48bff6451a2b6c79559971a1c449ed8f65c2f62f",
+    "run.json": "f8d0736f3b825e073039346efa5ff6ddf5aaccbbb63e57b694e9e4340da7d1fd"
   }
 }

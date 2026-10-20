@@ -1,1 +1,38 @@
 [23:58] queue: {'completed': 78598, 'pending': 205590, 'quarantined': 1, 'submitted': 200000}; spent $1.6861
+[00:03] queue: {'completed': 78598, 'pending': 205590, 'quarantined': 1, 'submitted': 200000}; spent $1.6861
+[00:08] queue: {'completed': 78598, 'pending': 205590, 'quarantined': 1, 'submitted': 200000}; spent $1.6861
+[00:13] queue: {'completed': 78598, 'pending': 205590, 'quarantined': 1, 'submitted': 200000}; spent $1.6861
+[00:18] queue: {'completed': 78598, 'pending': 205590, 'quarantined': 1, 'submitted': 200000}; spent $1.6861
+[00:23] collected batch_6ad70bef531c81909ba45077169ac81f: {'batches_done': 0, 'completed': 99796, 'quarantined': 0, 'retried': 204, 'fallback': 0, 'failed_calls': 0}
+[00:23] collected batch_6ad70c0ed02c8190bc73e93c569835a8: {'batches_done': 0, 'completed': 99783, 'quarantined': 0, 'retried': 217, 'fallback': 0, 'failed_calls': 1}
+[00:23] queue: {'completed': 278177, 'pending': 206011, 'quarantined': 1}; spent $3.7469
+[00:41] submit: batch batch_6ad71b2fa1b8819082b87da39148ec82 with 2200 requests / 110000 texts; reserved $1.6099; spent $3.7469
+[00:46] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[00:47] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[00:52] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[00:52] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[00:57] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[00:57] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:03] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[01:03] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:08] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[01:08] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:14] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[01:14] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:19] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[01:19] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:25] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[01:25] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:30] queue: {'completed': 278177, 'pending': 96011, 'quarantined': 1, 'submitted': 110000}; spent $3.7469
+[01:30] submit: refused - spent 3.7469 + open reservations 1.6099 + this job 1.3990 > cap 6.50; at most ~78115 texts fit
+[01:35] collected batch_6ad71b2fa1b8819082b87da39148ec82: {'batches_done': 0, 'completed': 109689, 'quarantined': 0, 'retried': 311, 'fallback': 0, 'failed_calls': 2}
+[01:35] queue: {'completed': 387866, 'pending': 96322, 'quarantined': 1}; spent $4.8988
+[02:04] submit: batch batch_6ad72eb7ce4c8190952be66b13f9d9ac with 1912 requests / 95590 texts; reserved $1.4076; spent $4.8988
+[02:10] queue: {'completed': 387866, 'pending': 732, 'quarantined': 1, 'submitted': 95590}; spent $4.8988
+[02:15] queue: {'completed': 387866, 'pending': 732, 'quarantined': 1, 'submitted': 95590}; spent $4.8988
+[02:20] queue: {'completed': 387866, 'pending': 732, 'quarantined': 1, 'submitted': 95590}; spent $4.8988
+[02:25] queue: {'completed': 387866, 'pending': 732, 'quarantined': 1, 'submitted': 95590}; spent $4.8988
+[02:30] queue: {'completed': 387866, 'pending': 732, 'quarantined': 1, 'submitted': 95590}; spent $4.8988
+[02:35] collected batch_6ad72eb7ce4c8190952be66b13f9d9ac: {'batches_done': 0, 'completed': 95417, 'quarantined': 0, 'retried': 173, 'fallback': 0, 'failed_calls': 0}
+[02:35] queue: {'completed': 483283, 'pending': 905, 'quarantined': 1}; spent $5.8974
+[08:56] DONE: no open batch jobs; pending fresh texts: 0

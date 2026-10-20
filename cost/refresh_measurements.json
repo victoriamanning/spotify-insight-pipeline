@@ -1,0 +1,18 @@
+[
+  {
+    "checkpoint_texts": 550,
+    "measured_texts": 550,
+    "enrich_cost_usd": 0.017770229999999998,
+    "cost_per_text": 3.230950909090909e-05,
+    "output_tokens_per_text": 50.25818181818182,
+    "summed_call_seconds": 486.00399999999985
+  },
+  {
+    "checkpoint_texts": 10050,
+    "measured_texts": 10087,
+    "enrich_cost_usd": 0.21907684999999993,
+    "cost_per_text": 2.1718732031327446e-05,
+    "output_tokens_per_text": 37.306533161495,
+    "summed_call_seconds": 3650.8389999999995
+  }
+]

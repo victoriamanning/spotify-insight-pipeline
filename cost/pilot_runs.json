@@ -1,0 +1,310 @@
+{
+  "cold": {
+    "run_id": "pilot-100",
+    "finished_at": "2026-10-20T04:06:22.814+00:00",
+    "stages": [
+      "ingest",
+      "enrich",
+      "verify",
+      "group",
+      "rank",
+      "memo",
+      "export"
+    ],
+    "stage_seconds": {
+      "ingest": 0.004,
+      "enrich": 31.282,
+      "verify": 10.447,
+      "group": 19.756,
+      "rank": 0.021,
+      "memo": 26.702,
+      "export": 0.027
+    },
+    "wall_clock_s": 88.243,
+    "provider": "openai",
+    "spend_cap_usd": 6.5,
+    "spent_usd_total": 0.004818,
+    "calls_by_role_outcome": [
+      {
+        "role": "enrich",
+        "outcome": "succeeded",
+        "n": 2,
+        "i": 6368,
+        "ci": 1987,
+        "o": 2792,
+        "usd": 0.00185397
+      },
+      {
+        "role": "group",
+        "outcome": "succeeded",
+        "n": 1,
+        "i": 2835,
+        "ci": 0,
+        "o": 1405,
+        "usd": 0.000986
+      },
+      {
+        "role": "memo",
+        "outcome": "succeeded",
+        "n": 2,
+        "i": 5136,
+        "ci": 0,
+        "o": 1993,
+        "usd": 0.0015101
+      },
+      {
+        "role": "verify",
+        "outcome": "succeeded",
+        "n": 2,
+        "i": 2087,
+        "ci": 0,
+        "o": 518,
+        "usd": 0.0004677
+      }
+    ],
+    "queue_status": {
+      "completed": 100
+    },
+    "enrich": {
+      "phase": "initial",
+      "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
+      "stats": {
+        "batches_done": 2,
+        "completed": 100,
+        "quarantined": 0,
+        "retried": 0,
+        "fallback": 0,
+        "failed_calls": 0
+      },
+      "queue_status": {
+        "completed": 100
+      },
+      "stop_reason": "queue drained",
+      "wall_clock_s": 31.278,
+      "spent_usd_total": 0.001854,
+      "finished_at": "2026-10-20T04:05:25.854+00:00"
+    }
+  },
+  "warm": {
+    "run_id": "pilot-100",
+    "finished_at": "2026-10-20T04:06:22.848+00:00",
+    "stages": [
+      "ingest",
+      "enrich",
+      "verify",
+      "group",
+      "rank",
+      "memo",
+      "export"
+    ],
+    "stage_seconds": {
+      "ingest": 0.001,
+      "enrich": 0.002,
+      "verify": 0.003,
+      "group": 0.003,
+      "rank": 0.007,
+      "memo": 0.004,
+      "export": 0.005
+    },
+    "wall_clock_s": 0.025,
+    "provider": "openai",
+    "spend_cap_usd": 6.5,
+    "spent_usd_total": 0.004818,
+    "calls_by_role_outcome": [
+      {
+        "role": "enrich",
+        "outcome": "succeeded",
+        "n": 2,
+        "i": 6368,
+        "ci": 1987,
+        "o": 2792,
+        "usd": 0.00185397
+      },
+      {
+        "role": "group",
+        "outcome": "succeeded",
+        "n": 1,
+        "i": 2835,
+        "ci": 0,
+        "o": 1405,
+        "usd": 0.000986
+      },
+      {
+        "role": "memo",
+        "outcome": "succeeded",
+        "n": 2,
+        "i": 5136,
+        "ci": 0,
+        "o": 1993,
+        "usd": 0.0015101
+      },
+      {
+        "role": "verify",
+        "outcome": "succeeded",
+        "n": 2,
+        "i": 2087,
+        "ci": 0,
+        "o": 518,
+        "usd": 0.0004677
+      }
+    ],
+    "queue_status": {
+      "completed": 100
+    },
+    "enrich": {
+      "phase": "initial",
+      "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
+      "stats": {
+        "batches_done": 0,
+        "completed": 0,
+        "quarantined": 0,
+        "retried": 0,
+        "fallback": 0,
+        "failed_calls": 0
+      },
+      "queue_status": {
+        "completed": 100
+      },
+      "stop_reason": "queue drained",
+      "wall_clock_s": 0.0,
+      "spent_usd_total": 0.004818,
+      "finished_at": "2026-10-20T04:06:22.826+00:00"
+    }
+  },
+  "ingestion": {
+    "source_file": "cost_100.csv",
+    "file_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+    "bytes": 15466,
+    "checker_profile": {
+      "file_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+      "parsed_rows_sha256": "23f840350257c058a03a508754384902373a593c09dbac3d1bd0481651fa1733",
+      "counts": {
+        "records": 100,
+        "duplicate_review_ids": 0,
+        "empty_review_text": 0,
+        "missing_app_version": 18
+      },
+      "reviews_by_month": {
+        "2023-07": 11,
+        "2023-02": 4,
+        "2023-09": 6,
+        "2023-04": 4,
+        "2022-10": 4,
+        "2023-10": 19,
+        "2023-11": 5,
+        "2022-12": 2,
+        "2022-09": 5,
+        "2023-06": 4,
+        "2023-03": 7,
+        "2022-07": 5,
+        "2023-05": 5,
+        "2023-08": 3,
+        "2022-06": 5,
+        "2023-01": 4,
+        "2022-08": 6,
+        "2022-11": 1
+      },
+      "reviews_by_rating": {
+        "3": 6,
+        "5": 43,
+        "1": 33,
+        "2": 8,
+        "4": 10
+      },
+      "first_review": "2022-06-02 10:30:18",
+      "last_review": "2023-11-13 15:07:19"
+    },
+    "records": 100,
+    "unique_review_ids": 100,
+    "duplicate_review_ids": 0,
+    "empty_review_text": 0,
+    "empty_review_ids": [],
+    "missing_app_version": 18,
+    "nonempty_reviews": 100,
+    "distinct_nonempty_texts": 100,
+    "rows_sharing_a_duplicated_text": 0,
+    "top_duplicate_texts": [
+      {
+        "text": "Thik thak hi hai",
+        "count": 1
+      },
+      {
+        "text": "Good at all",
+        "count": 1
+      },
+      {
+        "text": "Great",
+        "count": 1
+      },
+      {
+        "text": "You can't even listen to music you want it just shuffles it, like what the hell?",
+        "count": 1
+      },
+      {
+        "text": "This was fine till the last update, now you can't even pick a certain song witho",
+        "count": 1
+      },
+      {
+        "text": "Love it",
+        "count": 1
+      },
+      {
+        "text": "Fantastic experience",
+        "count": 1
+      },
+      {
+        "text": "Awesome app and music",
+        "count": 1
+      },
+      {
+        "text": "Best for listening songs",
+        "count": 1
+      },
+      {
+        "text": "Kudos spotify",
+        "count": 1
+      },
+      {
+        "text": "Great music",
+        "count": 1
+      },
+      {
+        "text": "Why it requires premium just to play next music / to choose music ?? And why the",
+        "count": 1
+      },
+      {
+        "text": "Excellent!",
+        "count": 1
+      },
+      {
+        "text": "Good aap",
+        "count": 1
+      },
+      {
+        "text": "Top music app and i can see why.",
+        "count": 1
+      }
+    ],
+    "ratings": {
+      "1": 33,
+      "2": 8,
+      "3": 6,
+      "4": 10,
+      "5": 43
+    },
+    "first_review": "2022-06-02 10:30:18",
+    "last_review": "2023-11-13 15:07:19",
+    "scope": {
+      "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
+      "sample_size_requested": 100000,
+      "sample_reviews": 100,
+      "sample_distinct_texts_to_classify": 100,
+      "priority_ids_first": 0,
+      "out_of_sample_rows_reusing_a_sample_text": 0,
+      "rows_out_of_scope": 0,
+      "ordering": "golden_50 -> checkpoint_500 -> analysis_10000 -> SHA-256(seed:review_id) ascending",
+      "seed": "berkeley-fall-2026-assignment-5-v1"
+    },
+    "runtime_s": 0.003
+  }
+}

@@ -67,14 +67,24 @@
       "all_quotes_are_substrings": true
     },
     "duplicate_ref": {
-      "completed_refs": [],
+      "completed_refs": [
+        "r1"
+      ],
       "errors": {
-        "r1": "duplicate_ref",
         "r2": "missing_in_output",
         "r3": "missing_in_output"
       },
-      "quotes": {},
-      "flags": {},
+      "quotes": {
+        "r1": [
+          "crashes",
+          "exact"
+        ]
+      },
+      "flags": {
+        "r1": [
+          "repeated_ref_later_line_ignored"
+        ]
+      },
       "all_quotes_are_substrings": true
     },
     "bad_label": {
@@ -166,6 +176,30 @@
       "quotes": {},
       "flags": {},
       "all_quotes_are_substrings": true
+    },
+    "model_restarts_list": {
+      "completed_refs": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "errors": {},
+      "quotes": {
+        "r1": [
+          "The app crashes on start",
+          "exact"
+        ],
+        "r2": [
+          "Great music",
+          "exact"
+        ],
+        "r3": [
+          "too many ads",
+          "exact"
+        ]
+      },
+      "flags": {},
+      "all_quotes_are_substrings": true
     }
   },
   "transient_failure_retry": {
@@ -176,18 +210,18 @@
       "RuntimeError: 503 injected temporary failure (test fault plan)"
     ],
     "succeeded": 2,
-    "log_tail": "enrich[initial]: 100 new texts in 2 batches, 0 retries, workers=1, cap=$9.00, spent so far=$0.0000\n  batches=2 completed+=100 retried=0 quarantined+=0 failed_calls=2 | queue {'completed': 100} | spent $0.0016 | 4s (23.6 texts/s)\ndone: ['enrich'] in 4.245s; total spent $0.0016\n"
+    "log_tail": "enrich[initial]: 100 new texts in 2 batches, 0 retries, workers=1, cap=$6.50, spent so far=$0.0000\n  batches=2 completed+=100 retried=0 quarantined+=0 failed_calls=2 | queue {'completed': 100} | spent $0.0016 | 5s (19.9 texts/s)\ndone: ['enrich'] in 5.046s; total spent $0.0016\n"
   },
   "spend_cap_stop_and_resume": {
     "cap_usd": 0.004,
-    "calls_before_stop": 3,
-    "spent_before_stop": 0.002345,
+    "calls_before_stop": 2,
+    "spent_before_stop": 0.00157,
     "stop_log": [
-      "budget stop: global cap $0.0040: spent 0.0023 + reserved 0.0000 + next 0.0019",
-      "stopped: budget stop: global cap $0.0040: spent 0.0023 + reserved 0.0000 + next 0.0019. Re-run the same command to resume."
+      "budget stop: global cap $0.0040: spent 0.0016 + reserved 0.0000 + next 0.0027",
+      "stopped: budget stop: global cap $0.0040: spent 0.0016 + reserved 0.0000 + next 0.0027. Re-run the same command to resume."
     ],
     "calls_after_resume": 10,
-    "resume_log_tail": "enrich[initial]: 329 new texts in 7 batches, 0 retries, workers=1, cap=$9.00, spent so far=$0.0023\n  batches=7 completed+=329 retried=0 quarantined+=0 failed_calls=0 | queue {'completed': 479} | spent $0.0075 | 1s (269.5 texts/s)\ndone: ['enrich'] in 1.225s; total spent $0.0075\n",
+    "resume_log_tail": "enrich[initial]: 379 new texts in 8 batches, 0 retries, workers=1, cap=$6.50, spent so far=$0.0016\n  batches=8 completed+=379 retried=0 quarantined+=0 failed_calls=0 | queue {'completed': 479} | spent $0.0075 | 1s (267.3 texts/s)\ndone: ['enrich'] in 1.42s; total spent $0.0075\n",
     "duplicate_ids_across_calls": 0
   }
 }

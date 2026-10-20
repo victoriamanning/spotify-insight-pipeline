@@ -1,0 +1,60 @@
+{
+  "run_id": "final",
+  "finished_at": "2026-10-20T04:36:58.876+00:00",
+  "stages": [
+    "enrich"
+  ],
+  "stage_seconds": {
+    "enrich": 223.578
+  },
+  "wall_clock_s": 223.604,
+  "provider": "openai",
+  "spend_cap_usd": 6.5,
+  "spent_usd_total": 0.252236,
+  "calls_by_role_outcome": [
+    {
+      "role": "enrich",
+      "outcome": "failed",
+      "n": 7,
+      "i": 19336,
+      "ci": 11922,
+      "o": 26010,
+      "usd": 0.01386562
+    },
+    {
+      "role": "enrich",
+      "outcome": "succeeded",
+      "n": 380,
+      "i": 1038515,
+      "ci": 769462,
+      "o": 407541,
+      "usd": 0.23837042
+    }
+  ],
+  "queue_status": {
+    "completed": 9524,
+    "pending": 68041,
+    "quarantined": 534
+  },
+  "enrich": {
+    "phase": "initial",
+    "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
+    "stats": {
+      "batches_done": 110,
+      "completed": 4066,
+      "quarantined": 292,
+      "retried": 794,
+      "fallback": 6,
+      "failed_calls": 3
+    },
+    "queue_status": {
+      "completed": 9524,
+      "pending": 68041,
+      "quarantined": 534
+    },
+    "stop_reason": "queue drained",
+    "wall_clock_s": 223.558,
+    "spent_usd_total": 0.252236,
+    "finished_at": "2026-10-20T04:36:58.832+00:00"
+  }
+}

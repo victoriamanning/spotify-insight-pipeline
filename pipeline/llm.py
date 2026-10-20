@@ -189,6 +189,10 @@ class Caller:
         if resp.status == "incomplete":
             reason = getattr(resp.incomplete_details, "reason", "unknown")
             a.text = resp.output_text or ""
+            if reason == "max_output_tokens" and a.text.strip():
+                # The request itself succeeded and was billed; code validates each returned line and retries the rest.
+                a.error = "incomplete:max_output_tokens (partial output parsed)"
+                return
             raise RuntimeError(f"incomplete response: {reason}")
         a.text = resp.output_text or ""
         if not a.text.strip():

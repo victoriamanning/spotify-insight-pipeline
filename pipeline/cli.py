@@ -164,6 +164,8 @@ def main(argv=None):
     sp = sub.add_parser("rerank", help="offline: recompute baseline ranking from saved records + membership")
     sp.add_argument("--records", required=True); sp.add_argument("--membership", required=True); sp.add_argument("--out", required=True)
     sp = sub.add_parser("status"); sp.add_argument("--run-dir", required=True)
+    sp = sub.add_parser("requeue", help="give quarantined invalid-output texts one more attempt after a parser fix (logged)")
+    sp.add_argument("--run-dir", required=True); sp.add_argument("--reason-prefix", default="invalid_model_output"); sp.add_argument("--note", required=True)
     sp = sub.add_parser("pilot", help="PAID: cold + warm run of the full pipeline on cost_100.csv (1 worker, empty cache)")
     sp.add_argument("--input", default=str(ROOT / "data" / "cost_100.csv")); sp.add_argument("--run-dir", default=str(ROOT / "runs" / "pilot-100"))
     sp.add_argument("--provider", default="openai", choices=["openai", "mock"])
@@ -185,6 +187,13 @@ def main(argv=None):
         rows = rank.rerank(args.records, args.membership, args.out)
         print(f"rerank: {len(rows)} issues -> {args.out}; top 3: " + ", ".join(f"{r['issue_id']}={r['priority_score']}" for r in rows[:3]))
         return rows
+    if args.cmd == "requeue":
+        con = db.connect(Path(args.run_dir) / "state.sqlite")
+        n = con.execute("UPDATE work SET status='pending', attempts=1, reason='requeued:' || reason WHERE status='quarantined' AND reason LIKE ?",
+                        (args.reason_prefix + "%",)).rowcount
+        log_event(args.run_dir, stage="enrich", event="requeue", rows=n, reason_prefix=args.reason_prefix, note=args.note)
+        print(f"requeued {n} quarantined texts (one more attempt each)")
+        return n
     if args.cmd == "status":
         con = db.connect(Path(args.run_dir) / "state.sqlite")
         print(json.dumps({"queue": {r["status"]: r["n"] for r in con.execute("SELECT status, COUNT(*) n FROM work GROUP BY status")},

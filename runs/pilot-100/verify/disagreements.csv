@@ -1,0 +1,13 @@
+review_id,review_text,enrich_topic,verify_topic,enrich_intent,verify_intent,enrich_severity,verify_severity,fields_disagreeing,enrich_needs_review
+32fb340f-4f9f-4551-8dae-755221e58d6a,It not letting me into my account and there are to many ads,access,access,complaint,complaint,4,3,severity,False
+33526c6f-7a49-4b3d-bd20-d1bc191c494c,"RUDE APP , THIS APP SUPPORT GUYS 🤮🤮🤮🤮🤮🤮🤮🤮🤮🤮. تطبيق سيء ، بدعم المثليين 🤮🤮🤮",other,support,complaint,complaint,2,2,topic,True
+035213ba-b1b9-411c-b028-70296e5f0e73,I m using this app from 5 to 6 year but now m uninstald this app cz his premium adds are everywhere now .,usability,billing,cancellation,cancellation,2,3,topic;severity,False
+084077ee-f9be-446a-9935-9e58550d5153,Thik thak hi hai,other,other,praise,complaint,1,2,intent;severity,True
+916d1cb1-3a9f-42c0-9c36-fee4b1983c68,L lovethemusic,catalog,other,praise,praise,1,1,topic,False
+9e3a706c-f502-4664-a23f-33f3480eca64,Useless aap boycott sweden,other,other,unclear,complaint,1,2,intent;severity,False
+b9a3e661-0eac-4cc9-a30e-7b1e11ef1315,"I ended up on Spotify because I wanted to listen to a specific podcast I really thought I was a Pandora lover, but I haven't turned my Pandora on since I loaded Spotify.",catalog,other,praise,praise,1,1,topic,False
+7084ced1-0428-4093-9328-442f74719b4f,I am using Spotify from past two years From last update they removed basic features of music player,billing,usability,complaint,complaint,3,3,topic,False
+ed15bb17-865a-492b-ba1b-268f4cab78f6,Very good app enna advertisement verudu premium best,usability,usability,praise,complaint,1,2,intent;severity,False
+88439ec2-7c49-4c57-bedb-c5e098692aff,I would request to remove all the new features .what's the point if we dont get to go back to the same song or skip songs..or choose .its not fair ..to restrict all the features jst so people would purchase premium ..its like forcing ..to do it ..and day by day it's getting more annoying..I g I'll s,billing,billing,cancellation,complaint,3,3,intent,False
+1807cc68-ba99-4edc-b6f1-2a1478e69109,I love Spotify recommendations music type before more than now. It was more songs and updated to newest song.,catalog,catalog,complaint,complaint,3,2,severity,False
+46ff0c74-5e86-4e5b-b4cd-36201aab0f9e,I am unable to use my Google assistant on the app.it says playing your Spotify playlist but do not play the songs,playback,playback,complaint,complaint,3,4,severity,False

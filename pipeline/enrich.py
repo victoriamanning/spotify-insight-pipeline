@@ -60,7 +60,7 @@ def find_quote(quote, text):
 def parse_output(output, items, taxonomy):
     """Validate every returned ref against the request. Returns ({idx: record}, {idx: error})."""
     by_ref = {f"r{k + 1}": k for k in range(len(items))}
-    results, errors, seen = {}, {}, set()
+    results, errors, seen, first_line = {}, {}, set(), {}
     for raw in output.strip().splitlines():
         line = raw.strip().strip("`").strip()
         if not line or "|" not in line:
@@ -71,10 +71,12 @@ def parse_output(output, items, taxonomy):
             continue  # foreign / invented reference: ignored, the expected ref is then reported missing
         k = by_ref[ref]
         if ref in seen:
-            errors[k] = "duplicate_ref"
-            results.pop(k, None)
+            # The model sometimes restarts its list after finishing; the first answer for a ref wins.
+            if k in results and line != first_line.get(k):
+                results[k]["flags"].append("repeated_ref_later_line_ignored")
             continue
         seen.add(ref)
+        first_line[k] = line
         if len(parts) != 9:
             errors[k] = f"wrong_field_count:{len(parts)}"
             continue
@@ -186,7 +188,11 @@ class Enricher:
 
         def queue_retries(items):
             nonlocal fb_used
-            if fb_used + len(items) <= fb_quota:  # capped fallback: one review per request, stronger setting
+            # A few bad lines in an otherwise valid response -> capped single-review fallback (stronger setting).
+            # A whole failed request (e.g. truncated output) -> retry the group once as a batch with the primary config.
+            if len(items) > 1 and any("flagged" in (it.get("last_error") or "") for it in items):
+                retry_queue.extend(([it], False) for it in items)  # isolate a content-filtered review
+            elif len(items) <= 5 and fb_used + len(items) <= fb_quota:
                 retry_queue.extend(([it], True) for it in items)
                 fb_used += len(items)
             else:
@@ -252,6 +258,10 @@ class Enricher:
         rids = [it["rid"] for it in items]
         stats["failed_calls"] += sum(a.outcome == "failed" for a in attempts)
         results, errors = (parse_output(final.text, items, self.tax) if final else ({}, {k: "call_failed" for k in range(len(items))}))
+        if errors:  # keep raw model output for failure analysis (no keys; review text only)
+            with open(self.run_dir / "raw_failed_outputs.jsonl", "a", encoding="utf-8") as f:
+                f.write(json.dumps({"request_id": attempts[-1].request_id, "review_ids": rids, "errors": {rids[k]: v for k, v in errors.items()},
+                                    "error": attempts[-1].error, "output": (final.text if final else attempts[-1].text)}) + "\n")
         retry = []
         self.con.execute("BEGIN IMMEDIATE")
         try:
@@ -267,11 +277,13 @@ class Enricher:
                     stats["fallback"] += used_fb
                 elif cur >= 1 + int(self.cfg["retry"]["invalid_output_retries"]):
                     self.con.execute("UPDATE work SET status='quarantined', attempts=?, reason=? WHERE text_sha256=? AND label_config=?",
-                                     (cur, f"invalid_model_output:{errors.get(k, 'unknown')}", it["text_sha"], self.lc))
+                                     (cur, ("provider_content_filter" if not final and "flagged" in attempts[-1].error else
+                                            f"invalid_model_output:{errors.get(k, 'unknown')}"), it["text_sha"], self.lc))
                     stats["quarantined"] += 1
                 else:
                     self.con.execute("UPDATE work SET attempts=?, reason=? WHERE text_sha256=? AND label_config=?",
                                      (cur, f"retry_pending:{errors.get(k, 'unknown')}", it["text_sha"], self.lc))
+                    it["last_error"] = attempts[-1].error if not final else ""
                     retry.append(it)
                     stats["retried"] += 1
             self.con.execute("COMMIT")

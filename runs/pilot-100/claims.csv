@@ -1,0 +1,6 @@
+claim_id,issue_id,metric,value
+C1,billing.free_tier_limits,complaint_count,11
+C2,billing.free_tier_limits,priority_score,32
+C3,usability.ads,priority_score,15
+C4,playback.crash_wont_open,priority_score,8
+C5,access.login_failure,priority_score,8

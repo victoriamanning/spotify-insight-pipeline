@@ -1,0 +1,28 @@
+{
+  "sampled": 50,
+  "verified": 50,
+  "missing_verifier_output": 0,
+  "agreement": {
+    "topic": 0.9,
+    "intent": 0.92,
+    "severity_exact": 0.86
+  },
+  "severity_mae": 0.14,
+  "disagreement_count": 12,
+  "disagreements_already_flagged_needs_review": 2,
+  "topic_confusion_enrich_vs_verify": {
+    "billing->usability": 1,
+    "catalog->other": 2,
+    "other->support": 1,
+    "usability->billing": 1
+  },
+  "sample_rule": "seeded SHA-256 order, 2% of model-labelled texts (min 50, max 2000)",
+  "verifier_label_config": "gpt-6-luna@none+verify_v1+lines_v1",
+  "stop_reason": "complete",
+  "runtime_s": 0.002,
+  "planted_error_test": {
+    "planted": 30,
+    "detected": 30,
+    "note": "Synthetic test copy; excluded from business aggregates."
+  }
+}

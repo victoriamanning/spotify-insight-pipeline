@@ -1,0 +1,457 @@
+{
+  "label_config": "gpt-6-luna@low+group_v1+json_v1",
+  "naming_status": "model",
+  "input_sha256": "e34188987ddfcca6e4c156f40ec136e72d88c65d6c4d6f3c279c11611061bc8c",
+  "reused_saved_output": true,
+  "error": "",
+  "membership_rule": "one issue per complaint/cancellation record: topic.subtopic",
+  "issues": [
+    {
+      "issue_id": "access.login_failure",
+      "topic": "access",
+      "subtopic": "login_failure",
+      "member_count": 2,
+      "name": "Unable to Log In",
+      "description": "Customers say they cannot enter their account or that their password is not accepted.",
+      "example_review_ids": [
+        "de0a9cdf-8974-48bc-802f-331228df4619",
+        "32fb340f-4f9f-4551-8dae-755221e58d6a"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "de0a9cdf-8974-48bc-802f-331228df4619",
+          "quote": "Will not except my password"
+        },
+        {
+          "review_id": "32fb340f-4f9f-4551-8dae-755221e58d6a",
+          "quote": "It not letting me into my account"
+        }
+      ]
+    },
+    {
+      "issue_id": "billing.free_tier_limits",
+      "topic": "billing",
+      "subtopic": "free_tier_limits",
+      "member_count": 11,
+      "name": "Free-Tier Playback Restrictions",
+      "description": "Customers say free users face skip limits, shuffled playback, and cannot choose specific songs.",
+      "example_review_ids": [
+        "a3605554-5c3a-441d-836e-e9fdea83eb2e",
+        "d146397f-4a94-4980-be00-ae9212eca3a7",
+        "a78d831a-69f4-428a-9235-cfdd9775c509"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "ebc64fe2-9553-4528-87d5-cb4bb9783be6",
+          "quote": "I CAN ONLY SKIP 6 OF THEM 6!!!"
+        },
+        {
+          "review_id": "7084ced1-0428-4093-9328-442f74719b4f",
+          "quote": "they removed basic features of music player"
+        },
+        {
+          "review_id": "a3605554-5c3a-441d-836e-e9fdea83eb2e",
+          "quote": "The ability to skip a song or go to previous song has been removed from non subscribed users."
+        },
+        {
+          "review_id": "5c9c17d3-9d6a-4fa1-a2a4-ae98eefbbd25",
+          "quote": "it plays any song of the Playlist randomly"
+        },
+        {
+          "review_id": "88439ec2-7c49-4c57-bedb-c5e098692aff",
+          "quote": "its like forcing ..to do it"
+        },
+        {
+          "review_id": "d146397f-4a94-4980-be00-ae9212eca3a7",
+          "quote": "you can't even pick a certain song without Spotify premium"
+        },
+        {
+          "review_id": "21915fcd-9a35-48ba-b277-6296c4154603",
+          "quote": "This app the new update has made everthing premium"
+        },
+        {
+          "review_id": "a78d831a-69f4-428a-9235-cfdd9775c509",
+          "quote": "You can't even listen to music you want it just shuffles it"
+        }
+      ]
+    },
+    {
+      "issue_id": "catalog.lyrics",
+      "topic": "catalog",
+      "subtopic": "lyrics",
+      "member_count": 2,
+      "name": "Lyrics Missing From Some Songs",
+      "description": "Customers say lyrics are not shown for some songs.",
+      "example_review_ids": [
+        "e0127547-4edd-44a0-8d5e-e8398bc07086",
+        "47becad0-8ae5-4a10-9731-fde8f2091862"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "e0127547-4edd-44a0-8d5e-e8398bc07086",
+          "quote": "sometime the lyrics don't show"
+        },
+        {
+          "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+          "quote": "in some songs there is no lyrics"
+        }
+      ]
+    },
+    {
+      "issue_id": "catalog.missing_content",
+      "topic": "catalog",
+      "subtopic": "missing_content",
+      "member_count": 2,
+      "name": "Songs Missing From the Catalog",
+      "description": "Customers say many songs are unavailable, including gospel music.",
+      "example_review_ids": [
+        "a1a28752-3256-4f81-b888-3e943343529f",
+        "0658feaa-5bec-416e-b6b0-3de2a4c14580"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "a1a28752-3256-4f81-b888-3e943343529f",
+          "quote": "gospel music isn't much"
+        },
+        {
+          "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+          "quote": "many songs are not present here!"
+        }
+      ]
+    },
+    {
+      "issue_id": "catalog.recommendations",
+      "topic": "catalog",
+      "subtopic": "recommendations",
+      "member_count": 2,
+      "name": "Unwanted or Worse Recommendations",
+      "description": "Customers say recommendations have worsened or they want them to stop.",
+      "example_review_ids": [
+        "1807cc68-ba99-4edc-b6f1-2a1478e69109",
+        "618d1dbb-0186-4537-923a-7b4dabf19afb"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "1807cc68-ba99-4edc-b6f1-2a1478e69109",
+          "quote": "I love Spotify recommendations music type before more than now."
+        },
+        {
+          "review_id": "618d1dbb-0186-4537-923a-7b4dabf19afb",
+          "quote": "Please stop with the recommendations!"
+        }
+      ]
+    },
+    {
+      "issue_id": "downloads.cannot_download",
+      "topic": "downloads",
+      "subtopic": "cannot_download",
+      "member_count": 1,
+      "name": "Downloads Stuck in Progress",
+      "description": "A customer says songs remain stuck downloading in the background.",
+      "example_review_ids": [
+        "2ffdf599-a0d5-4c01-bf26-025215d44c06"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "2ffdf599-a0d5-4c01-bf26-025215d44c06",
+          "quote": "always stuck downloading songs in the background"
+        }
+      ]
+    },
+    {
+      "issue_id": "downloads.offline_mode",
+      "topic": "downloads",
+      "subtopic": "offline_mode",
+      "member_count": 1,
+      "name": "Offline Listening Not Working",
+      "description": "A customer says offline mode is not working.",
+      "example_review_ids": [
+        "dcff57c6-abd6-413b-b255-aec3dc34fcbd"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "dcff57c6-abd6-413b-b255-aec3dc34fcbd",
+          "quote": "Offline not workjng"
+        }
+      ]
+    },
+    {
+      "issue_id": "other.general",
+      "topic": "other",
+      "subtopic": "general",
+      "member_count": 8,
+      "name": "General App Dissatisfaction",
+      "description": "Customers express broad dissatisfaction with the app without naming a specific problem.",
+      "example_review_ids": [
+        "b92a7381-b5cd-4c77-9176-e5c4b4818c8a",
+        "8b6e028a-5f63-4011-9841-cbbade4830eb",
+        "51bfd887-24a0-4741-8b59-68e0a726dd7a"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "b92a7381-b5cd-4c77-9176-e5c4b4818c8a",
+          "quote": "You deserve 0 star"
+        },
+        {
+          "review_id": "8b6e028a-5f63-4011-9841-cbbade4830eb",
+          "quote": "Very bad app"
+        },
+        {
+          "review_id": "2d5cdd20-3094-40a5-bc6e-653302b59b56",
+          "quote": "Noob app"
+        },
+        {
+          "review_id": "c1ab120a-f91f-4ee3-87f5-66f352e2d47f",
+          "quote": "But now it's a trash 🗑️"
+        },
+        {
+          "review_id": "178c3b49-b689-4fe4-92a2-2257a58e6d95",
+          "quote": "Worst app."
+        },
+        {
+          "review_id": "06a45bd5-3ed9-43af-b7f2-8b9487e2ffff",
+          "quote": "Worst app"
+        },
+        {
+          "review_id": "b47c203f-366e-4409-922d-cd52aa8bbef6",
+          "quote": "bye Spotify"
+        },
+        {
+          "review_id": "51bfd887-24a0-4741-8b59-68e0a726dd7a",
+          "quote": "Disappointing"
+        }
+      ]
+    },
+    {
+      "issue_id": "other.unrelated",
+      "topic": "other",
+      "subtopic": "unrelated",
+      "member_count": 3,
+      "name": "Unrelated or Unsupported Complaints",
+      "description": "Examples include a boycott statement, unsupported-language text, and a vague complaint about support.",
+      "example_review_ids": [
+        "486d1d7a-d6f6-41ea-81ad-ed875452729c",
+        "3e82cf28-6b0a-4980-902c-b6aa154d353a",
+        "33526c6f-7a49-4b3d-bd20-d1bc191c494c"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "486d1d7a-d6f6-41ea-81ad-ed875452729c",
+          "quote": "i am uninstalling this app they burn quran and i will bycot this app"
+        },
+        {
+          "review_id": "3e82cf28-6b0a-4980-902c-b6aa154d353a",
+          "quote": "Aakhir kar spotify ne bhi apni bhikaariyo vali aukaat dikha di \"Gadar karbe"
+        },
+        {
+          "review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
+          "quote": "RUDE APP , THIS APP SUPPORT GUYS"
+        }
+      ]
+    },
+    {
+      "issue_id": "playback.audio_quality",
+      "topic": "playback",
+      "subtopic": "audio_quality",
+      "member_count": 1,
+      "name": "Music Adjustment Not Working",
+      "description": "A customer says music adjustment does not work properly.",
+      "example_review_ids": [
+        "9c9757da-6b99-4c95-a0e7-0661ee858027"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "9c9757da-6b99-4c95-a0e7-0661ee858027",
+          "quote": "music adjustment doesn't work Perporly"
+        }
+      ]
+    },
+    {
+      "issue_id": "playback.connection_error",
+      "topic": "playback",
+      "subtopic": "connection_error",
+      "member_count": 1,
+      "name": "Cannot Connect Over Wi-Fi",
+      "description": "A customer says the app cannot connect to the internet when using Wi-Fi.",
+      "example_review_ids": [
+        "4ab2089a-ffa8-49e7-a8a3-aeb583a96796"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "4ab2089a-ffa8-49e7-a8a3-aeb583a96796",
+          "quote": "if i using wifi not able to connect Internet."
+        }
+      ]
+    },
+    {
+      "issue_id": "playback.crash_wont_open",
+      "topic": "playback",
+      "subtopic": "crash_wont_open",
+      "member_count": 2,
+      "name": "App Crashes or Stuck Loading",
+      "description": "Customers say the app crashes when opened or stays stuck on the loading screen.",
+      "example_review_ids": [
+        "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+        "66a29b3c-c14d-440e-b722-b23e0c99ae82"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+          "quote": "my app to crash I cant open the app"
+        },
+        {
+          "review_id": "66a29b3c-c14d-440e-b722-b23e0c99ae82",
+          "quote": "App is stuck on loading/logo screen"
+        }
+      ]
+    },
+    {
+      "issue_id": "playback.device_integration",
+      "topic": "playback",
+      "subtopic": "device_integration",
+      "member_count": 1,
+      "name": "Songs Not Playing",
+      "description": "A customer says songs do not play.",
+      "example_review_ids": [
+        "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e",
+          "quote": "do not play the songs"
+        }
+      ]
+    },
+    {
+      "issue_id": "playback.stops_skips",
+      "topic": "playback",
+      "subtopic": "stops_skips",
+      "member_count": 1,
+      "name": "Playback Stops Mid-Song",
+      "description": "A customer says music repeatedly stops halfway through playback.",
+      "example_review_ids": [
+        "6c257eba-3dca-49f6-b7f0-4c4484d81e26"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "6c257eba-3dca-49f6-b7f0-4c4484d81e26",
+          "quote": "Keep stopping halfway while playing music"
+        }
+      ]
+    },
+    {
+      "issue_id": "usability.ads",
+      "topic": "usability",
+      "subtopic": "ads",
+      "member_count": 7,
+      "name": "Too Many or Loud Ads",
+      "description": "Customers complain that ads are too frequent, interrupt songs, or are too loud.",
+      "example_review_ids": [
+        "e5e6c55f-3069-4b7c-9807-f8b5d5bf2726",
+        "3e8bdc92-4934-457e-85cc-8b9d14bf51c0",
+        "ab67a772-c3b7-42ba-9b80-8d21d3857018"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "85383985-844d-4f9b-bcd9-d6016ac35f6b",
+          "quote": "adds are too much"
+        },
+        {
+          "review_id": "e5e6c55f-3069-4b7c-9807-f8b5d5bf2726",
+          "quote": "Too many ads.... it's literally useless if u hv not taken premium"
+        },
+        {
+          "review_id": "c2738a4f-e57c-46bc-a4ad-8ec5a4b5d5cd",
+          "quote": "Soo trash wayy to many ads"
+        },
+        {
+          "review_id": "3e8bdc92-4934-457e-85cc-8b9d14bf51c0",
+          "quote": "it's always every 1 or 2 song then instant ads"
+        },
+        {
+          "review_id": "cf6166ae-d71a-4839-9add-088645ad3b78",
+          "quote": "always plays adds instead of songs"
+        },
+        {
+          "review_id": "ab67a772-c3b7-42ba-9b80-8d21d3857018",
+          "quote": "The ads are so loud :'("
+        },
+        {
+          "review_id": "035213ba-b1b9-411c-b028-70296e5f0e73",
+          "quote": "now m uninstald this app cz his premium adds are everywhere now ."
+        }
+      ]
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "topic": "usability",
+      "subtopic": "navigation_controls",
+      "member_count": 3,
+      "name": "Playback Controls Hard to Find",
+      "description": "Customers report difficulty going back in a song or finding a setting to disable autoplay.",
+      "example_review_ids": [
+        "9e5f9745-f8be-48d3-b9de-4d118507d94a",
+        "d455c11e-c530-4c03-a395-38f5a5cdb8d3"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "9e5f9745-f8be-48d3-b9de-4d118507d94a",
+          "quote": "We can't even go back few second to play music?"
+        },
+        {
+          "review_id": "e16a4550-43e7-4ae1-b538-a65cc652c31b",
+          "quote": "I'm leaving spotfy"
+        },
+        {
+          "review_id": "d455c11e-c530-4c03-a395-38f5a5cdb8d3",
+          "quote": "without any clear way to disable the automatic playing in the settings?"
+        }
+      ]
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "topic": "usability",
+      "subtopic": "ui_redesign",
+      "member_count": 3,
+      "name": "Disliked App Updates",
+      "description": "Customers say recent updates or the new home screen made the app worse.",
+      "example_review_ids": [
+        "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+        "94c9f2f9-36fa-4c11-936e-660514fe7a35",
+        "ca16e65d-d2ff-4453-a495-b8c422809330"
+      ],
+      "naming_source": "model_cached",
+      "example_pack": [
+        {
+          "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+          "quote": "The update made the app useless"
+        },
+        {
+          "review_id": "94c9f2f9-36fa-4c11-936e-660514fe7a35",
+          "quote": "the new homescreen update is horrible."
+        },
+        {
+          "review_id": "ca16e65d-d2ff-4453-a495-b8c422809330",
+          "quote": "Recent update 👎"
+        }
+      ]
+    }
+  ],
+  "runtime_s": 0.002
+}

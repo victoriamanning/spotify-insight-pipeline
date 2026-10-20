@@ -1,0 +1,17 @@
+{
+  "records": 100,
+  "status_counts": {
+    "completed": 100
+  },
+  "calls": 7,
+  "cache_reuse_rows": 0,
+  "files": {
+    "calls.jsonl": "8cc8d33eff9fbee972a27a91c579f37ac4d80fd4088a51da27b146eb584ce9ed",
+    "claims.csv": "e0efa25d6f8d3083dca395e9e4b861b577acfdc34f4d2b44186a638b9fa11e0c",
+    "ingestion.json": "4277d2569fec08d8e534d9d4fb985971db358423b836f1078d3d92ce65d85087",
+    "membership.csv": "777f3f461e1dfcf9c329cfcd4ec05441d5bafca3c2ff6b351ef7c10e68c4c34c",
+    "ranking.csv": "fc3ae96bee21ef1d5f17f3ee2fb23da629105e405671d4ee90b58635baf7668f",
+    "records.jsonl.gz": "7381b0f2681354d96cd9c2a6ccc21f1171b1cada0b65b05dedbd0dd066a4a041",
+    "run.json": "ebb15ac115e8b8efa0ca0fa56ba4a21e6390acbab9a22c50657da48314f45fac"
+  }
+}

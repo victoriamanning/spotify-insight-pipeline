@@ -1,0 +1,283 @@
+{
+  "label_config": "gpt-6-luna@low+memo_v1+json_v1",
+  "status": "validated",
+  "validation_errors": [],
+  "memo": {
+    "priority_area": "billing_support",
+    "headline": "Prioritize clearer, more predictable free-tier playback limits",
+    "recommendation": "Spend next quarter clarifying which playback choices are available on the free tier and making restrictions feel consistent and transparent. Free-tier playback restrictions lead the issue ranking by complaint count [C1] and priority score [C2]. Reviews describe being unable to choose a specific song and perceiving that the update made everything premium (d146397f-4a94-4980-be00-ae9212eca3a7; 21915fcd-9a35-48ba-b277-6296c4154603). Treat the cancellation-language example as expressed intent, not evidence of observed churn (88439ec2-7c49-4c57-bedb-c5e098692aff).",
+    "first_issues": [
+      "billing.free_tier_limits"
+    ],
+    "alternatives": [
+      {
+        "area": "usability",
+        "why_lower": "Usability has more complaints across its area aggregate, but its leading ranked issue, ads, has a lower priority score than free-tier restrictions [C3]. Address ad loudness and frequency as a follow-on; reviews specifically mention loud ads and ads interrupting songs (ab67a772-c3b7-42ba-9b80-8d21d3857018; cf6166ae-d71a-4839-9add-088645ad3b78)."
+      },
+      {
+        "area": "playback",
+        "why_lower": "Playback has fewer complaints overall than billing_support in the area aggregates. Its crash/loading issue is serious, with severity-4 reports of crashes and a stuck loading screen, but has a lower priority score [C4] (55cc3abf-c295-4591-8c3a-78085cfdefaa; 66a29b3c-c14d-440e-b722-b23e0c99ae82)."
+      },
+      {
+        "area": "access",
+        "why_lower": "Login failure is severe in the sampled reviews, but its ranked priority score is lower [C5] and the area aggregate covers fewer complaints than billing_support."
+      }
+    ],
+    "limitations": [
+      "This is a self-selected sample of historical Google Play reviews, not a representative measure of all Spotify users.",
+      "The classification scope is a uniform seeded sample; no rows were unclassified within budget, but findings remain bounded by that sample and the stated review window.",
+      "Model labels and issue assignments may be wrong; validate against support and product data before acting.",
+      "Cancellation language expresses reviewer intent, not observed churn.",
+      "No revenue data was supplied; these results do not estimate revenue at risk or causal impact."
+    ],
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "billing.free_tier_limits",
+        "metric": "complaint_count",
+        "value": "11"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "billing.free_tier_limits",
+        "metric": "priority_score",
+        "value": "32"
+      },
+      {
+        "claim_id": "C3",
+        "issue_id": "usability.ads",
+        "metric": "priority_score",
+        "value": "15"
+      },
+      {
+        "claim_id": "C4",
+        "issue_id": "playback.crash_wont_open",
+        "metric": "priority_score",
+        "value": "8"
+      },
+      {
+        "claim_id": "C5",
+        "issue_id": "access.login_failure",
+        "metric": "priority_score",
+        "value": "8"
+      }
+    ],
+    "cited_review_ids": [
+      "d146397f-4a94-4980-be00-ae9212eca3a7",
+      "21915fcd-9a35-48ba-b277-6296c4154603",
+      "88439ec2-7c49-4c57-bedb-c5e098692aff",
+      "ab67a772-c3b7-42ba-9b80-8d21d3857018",
+      "cf6166ae-d71a-4839-9add-088645ad3b78",
+      "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+      "66a29b3c-c14d-440e-b722-b23e0c99ae82"
+    ]
+  },
+  "evidence_pack": [
+    {
+      "issue_id": "billing.free_tier_limits",
+      "review_id": "d146397f-4a94-4980-be00-ae9212eca3a7",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "you can't even pick a certain song without Spotify premium"
+    },
+    {
+      "issue_id": "billing.free_tier_limits",
+      "review_id": "21915fcd-9a35-48ba-b277-6296c4154603",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "This app the new update has made everthing premium"
+    },
+    {
+      "issue_id": "billing.free_tier_limits",
+      "review_id": "88439ec2-7c49-4c57-bedb-c5e098692aff",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "its like forcing ..to do it"
+    },
+    {
+      "issue_id": "other.general",
+      "review_id": "b47c203f-366e-4409-922d-cd52aa8bbef6",
+      "severity": 2,
+      "intent": "cancellation",
+      "quote": "bye Spotify"
+    },
+    {
+      "issue_id": "other.general",
+      "review_id": "2d5cdd20-3094-40a5-bc6e-653302b59b56",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "Noob app"
+    },
+    {
+      "issue_id": "other.general",
+      "review_id": "8b6e028a-5f63-4011-9841-cbbade4830eb",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "Very bad app"
+    },
+    {
+      "issue_id": "usability.ads",
+      "review_id": "ab67a772-c3b7-42ba-9b80-8d21d3857018",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "The ads are so loud :'("
+    },
+    {
+      "issue_id": "usability.ads",
+      "review_id": "cf6166ae-d71a-4839-9add-088645ad3b78",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "always plays adds instead of songs"
+    },
+    {
+      "issue_id": "usability.ads",
+      "review_id": "3e8bdc92-4934-457e-85cc-8b9d14bf51c0",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "it's always every 1 or 2 song then instant ads"
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "review_id": "d455c11e-c530-4c03-a395-38f5a5cdb8d3",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "without any clear way to disable the automatic playing in the settings?"
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "review_id": "e16a4550-43e7-4ae1-b538-a65cc652c31b",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "I'm leaving spotfy"
+    },
+    {
+      "issue_id": "usability.navigation_controls",
+      "review_id": "9e5f9745-f8be-48d3-b9de-4d118507d94a",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "We can't even go back few second to play music?"
+    },
+    {
+      "issue_id": "access.login_failure",
+      "review_id": "32fb340f-4f9f-4551-8dae-755221e58d6a",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "It not letting me into my account"
+    },
+    {
+      "issue_id": "access.login_failure",
+      "review_id": "de0a9cdf-8974-48bc-802f-331228df4619",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "Will not except my password"
+    },
+    {
+      "issue_id": "playback.crash_wont_open",
+      "review_id": "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "my app to crash I cant open the app"
+    },
+    {
+      "issue_id": "playback.crash_wont_open",
+      "review_id": "66a29b3c-c14d-440e-b722-b23e0c99ae82",
+      "severity": 4,
+      "intent": "complaint",
+      "quote": "App is stuck on loading/logo screen"
+    },
+    {
+      "issue_id": "catalog.lyrics",
+      "review_id": "e0127547-4edd-44a0-8d5e-e8398bc07086",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "sometime the lyrics don't show"
+    },
+    {
+      "issue_id": "catalog.lyrics",
+      "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "in some songs there is no lyrics"
+    },
+    {
+      "issue_id": "catalog.missing_content",
+      "review_id": "a1a28752-3256-4f81-b888-3e943343529f",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "gospel music isn't much"
+    },
+    {
+      "issue_id": "catalog.missing_content",
+      "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "many songs are not present here!"
+    },
+    {
+      "issue_id": "catalog.recommendations",
+      "review_id": "618d1dbb-0186-4537-923a-7b4dabf19afb",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "Please stop with the recommendations!"
+    },
+    {
+      "issue_id": "catalog.recommendations",
+      "review_id": "1807cc68-ba99-4edc-b6f1-2a1478e69109",
+      "severity": 3,
+      "intent": "complaint",
+      "quote": "I love Spotify recommendations music type before more than now."
+    },
+    {
+      "issue_id": "other.unrelated",
+      "review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "RUDE APP , THIS APP SUPPORT GUYS"
+    },
+    {
+      "issue_id": "other.unrelated",
+      "review_id": "3e82cf28-6b0a-4980-902c-b6aa154d353a",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "Aakhir kar spotify ne bhi apni bhikaariyo vali aukaat dikha di \"Gadar karbe"
+    },
+    {
+      "issue_id": "other.unrelated",
+      "review_id": "486d1d7a-d6f6-41ea-81ad-ed875452729c",
+      "severity": 2,
+      "intent": "cancellation",
+      "quote": "i am uninstalling this app they burn quran and i will bycot this app"
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "review_id": "94c9f2f9-36fa-4c11-936e-660514fe7a35",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "the new homescreen update is horrible."
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+      "severity": 2,
+      "intent": "cancellation",
+      "quote": "The update made the app useless"
+    },
+    {
+      "issue_id": "usability.ui_redesign",
+      "review_id": "ca16e65d-d2ff-4453-a495-b8c422809330",
+      "severity": 2,
+      "intent": "complaint",
+      "quote": "Recent update 👎"
+    },
+    {
+      "issue_id": "downloads.cannot_download",
+      "review_id": "2ffdf599-a0d5-4c01-bf26-025215d44c06",
+      "severity": 3,
+      "intent": "cancellation",
+      "quote": "always stuck downloading songs in the background"
+    }
+  ],
+  "input_sha256": "50324b0d9bfddfb6fcce864e0926aeb8b3e9d499554f42c5c35cb47cea8a5115",
+  "reused_saved_output": true,
+  "runtime_s": 0.002
+}

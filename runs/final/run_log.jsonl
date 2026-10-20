@@ -1,2 +1,18 @@
 {"ts": "2026-10-20T03:51:43.505+00:00", "stage": "ingest", "event": "start", "provider": "openai"}
 {"ts": "2026-10-20T03:53:19.721+00:00", "stage": "ingest", "event": "end", "seconds": 96.215}
+{"ts": "2026-10-20T04:10:36.191+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:19:11.545+00:00", "stage": "enrich", "event": "end", "seconds": 515.35}
+{"ts": "2026-10-20T04:19:12.579+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:21:16.536+00:00", "stage": "enrich", "event": "stopped", "reason": "interrupted (SIGINT) - finishing in-flight batches, then saving", "seconds": 123.956}
+{"ts":"2026-10-20","stage":"enrich","event":"note","detail":"dev run paused with SIGINT to fix max_output_tokens retries; auto checkpoint renamed dev_pause_checkpoint_not_demo.json (not the graded resume demo)"}
+{"ts": "2026-10-20T04:22:12.032+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:27:24.006+00:00", "stage": "enrich", "event": "end", "seconds": 311.971}
+{"ts": "2026-10-20T04:27:25.144+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:33:14.268+00:00", "stage": "enrich", "event": "end", "seconds": 349.121}
+{"ts": "2026-10-20T04:33:15.300+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:36:58.850+00:00", "stage": "enrich", "event": "end", "seconds": 223.578}
+{"ts": "2026-10-20T04:37:47.502+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:38:46.393+00:00", "stage": "enrich", "event": "end", "seconds": 58.89}
+{"ts": "2026-10-20T04:39:34.833+00:00", "stage": "enrich", "event": "requeue", "rows": 534, "reason_prefix": "invalid_model_output", "note": "parser fix: model restarting its list was misread as duplicate_ref; truncated responses now parsed line by line"}
+{"ts": "2026-10-20T04:39:35.714+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T04:40:52.408+00:00", "stage": "enrich", "event": "end", "seconds": 76.694}

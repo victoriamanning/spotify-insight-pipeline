@@ -44,6 +44,7 @@ def parser_tests():
         "paraphrased_quote": "r1|playback|crash_wont_open|complaint|4|-2|0|-|\"the app CRASHES on start...\"\nr2|other|general|praise|1|2|0|-|Wonderful music\nr3|usability|ads|complaint|2|-1|0|commercials|too many ads",
         "rule_violation": "r1|playback|crash_wont_open|praise|4|2|0|-|crashes\nr2|other|general|complaint|1|-1|0|-|Great music\nr3|usability|banner|complaint|2|-1|0|-|ads",
         "garbage": "```json\n{\"oops\": true}\n```",
+        "model_restarts_list": "r1|playback|crash_wont_open|complaint|4|-2|0|-|The app crashes on start\nr2|other|general|praise|1|2|0|-|Great music\nr3|usability|ads|complaint|2|-1|0|-|too many ads\nr1|playback|crash_wont_open|complaint|4|-2|0|-|The app crashes on start\nr2|other|general|praise|1|2|0|-|Great music",
     }
     out = {}
     for name, text in cases.items():

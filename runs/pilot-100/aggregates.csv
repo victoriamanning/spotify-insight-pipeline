@@ -1,0 +1,18 @@
+issue_id,name,complaint_count,severity_sum,mean_severity,priority_score,cancellation_records,severity_4_or_5,needs_review,cache_reused_rows
+billing.free_tier_limits,Free-Tier Playback Restrictions,11,32,2.909091,32,1,0,0,0
+other.general,General App Dissatisfaction,8,16,2.000000,16,1,0,0,0
+usability.ads,Too Many or Loud Ads,7,15,2.142857,15,1,0,0,0
+usability.navigation_controls,Playback Controls Hard to Find,3,9,3.000000,9,2,0,0,0
+access.login_failure,Unable to Log In,2,8,4.000000,8,0,2,0,0
+playback.crash_wont_open,App Crashes or Stuck Loading,2,8,4.000000,8,0,2,0,0
+catalog.lyrics,Lyrics Missing From Some Songs,2,6,3.000000,6,0,0,0,0
+catalog.missing_content,Songs Missing From the Catalog,2,6,3.000000,6,0,0,0,0
+catalog.recommendations,Unwanted or Worse Recommendations,2,6,3.000000,6,1,0,0,0
+other.unrelated,Unrelated or Unsupported Complaints,3,6,2.000000,6,1,0,2,0
+usability.ui_redesign,Disliked App Updates,3,6,2.000000,6,1,0,1,0
+downloads.cannot_download,Downloads Stuck in Progress,1,3,3.000000,3,1,0,0,0
+downloads.offline_mode,Offline Listening Not Working,1,3,3.000000,3,0,0,0,0
+playback.audio_quality,Music Adjustment Not Working,1,3,3.000000,3,0,0,0,0
+playback.connection_error,Cannot Connect Over Wi-Fi,1,3,3.000000,3,0,0,0,0
+playback.device_integration,Songs Not Playing,1,3,3.000000,3,0,0,0,0
+playback.stops_skips,Playback Stops Mid-Song,1,3,3.000000,3,0,0,0,0

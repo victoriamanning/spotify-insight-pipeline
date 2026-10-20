@@ -29,7 +29,7 @@ def read_records(path):
 
 
 def split(v):
-    return [x.strip() for x in (v or "").replace(",", ";").split(";") if x.strip()]
+    return [x.strip().lower() for x in (v or "").replace(",", ";").split(";") if x.strip()]
 
 
 def main():

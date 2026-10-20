@@ -1,0 +1,48 @@
+{
+  "cases": 50,
+  "valid_predictions": 50,
+  "ambiguous_cases": 3,
+  "topic_agreement": 0.74,
+  "intent_agreement": 0.88,
+  "severity_exact_agreement": 0.82,
+  "severity_mae_valid": 0.2,
+  "sentiment_within_0.5": 0.84,
+  "sentiment_mae": 0.28,
+  "joint_topic_intent_severity": 0.56,
+  "evidence_quote_exact_substring": "50/50",
+  "unsupported_entity_additions": 0,
+  "needs_review_vs_ambiguous": {
+    "tp": 0,
+    "fp": 7,
+    "fn": 3
+  },
+  "per_topic_recall": {
+    "billing": "0/1",
+    "other": "29/37",
+    "playback": "4/6",
+    "usability": "4/6"
+  },
+  "topic_confusion_human_to_pred": {
+    "billing->downloads": 1,
+    "other->catalog": 4,
+    "other->other": 28,
+    "other->playback": 1,
+    "other->usability": 4,
+    "playback->billing": 2,
+    "playback->playback": 3,
+    "playback->usability": 1,
+    "usability->billing": 2,
+    "usability->usability": 4
+  },
+  "intent_confusion_human_to_pred": {
+    "cancellation->cancellation": 1,
+    "complaint->complaint": 15,
+    "praise->complaint": 1,
+    "praise->praise": 20,
+    "request->complaint": 3,
+    "request->request": 1,
+    "unclear->complaint": 3,
+    "unclear->unclear": 6
+  },
+  "rules": "  python evals/eval_golden.py --records runs/final/grading/records.jsonl.gz\n\nPredeclared rules: topic/intent agreement counts a prediction as correct if it equals the primary human label or a\nlisted alternative (ambiguous cases); severity exact agreement and mean absolute error vs the closest accepted level;\nsentiment tolerance |pred - human| <= 0.5 on the -1..1 scale (and MAE); evidence_quote must be an exact substring\n(checked in code) and is listed for human inspection of support; entities not present in the text are unsupported\nadditions; needs_review is scored as a prediction of the human 'ambiguous' flag. Missing/quarantined predictions\ncount as incorrect."
+}

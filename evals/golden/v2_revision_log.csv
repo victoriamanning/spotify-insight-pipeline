@@ -1,0 +1,9 @@
+n,review_id,field,v1,v2,rule,revised_after_seeing_model_output,decided_by
+11,947821dc-b356-45dc-a0bc-1903728fad40,intent,request,complaint,Request requires no reported failure; review reports playback stopping,yes,human labeller
+22,de48c99b-46fe-4837-8634-e63dbc72a5ea,topic,other,catalog,Positive review: first specific praised feature (recommendations) -> catalog,yes,human labeller
+30,16d640e9-b281-4746-9562-c7dbcf7126b6,topic,usability,billing,Explicitly premium-only controls go to billing,yes,human labeller
+32,215463ae-95b7-4481-8747-1754b68f31fa,intent,request,complaint,Request requires no reported failure; review reports songs not playing,yes,human labeller
+44,5fba12ea-4980-4f25-a129-f830a3974fd2,topic,other,catalog,Positive review: first specific praised feature (finding/adding songs) -> catalog,yes,human labeller
+45,ac4e860a-c042-49cc-90f3-189591c336ac,topic,billing,downloads,A paid-plan mention alone is not billing; the failure is offline listening,yes,human labeller
+46,9034d675-9582-49b6-a1c1-c4ddabf8baf1,topic,other,usability,Ad interruptions are usability,yes,human labeller
+48,99b93e31-9f15-4daa-88ac-349ab0419c48,topic,other,usability,Borderline: disliked update/redesign -> usability ui_redesign rather than general other,yes,human labeller

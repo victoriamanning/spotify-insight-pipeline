@@ -34,7 +34,7 @@ def split(v):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--labels", default=HERE / "golden" / "golden_50_labels.csv")
+    ap.add_argument("--labels", default=HERE / "golden" / "golden_50_labels_v1.csv")
     ap.add_argument("--records", required=True)
     ap.add_argument("--out", default=HERE / "golden")
     a = ap.parse_args()

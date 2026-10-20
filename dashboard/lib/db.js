@@ -5,7 +5,9 @@ let pool;
 export function db() {
   if (!pool) {
     if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is not configured");
-    pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 3, ssl: { rejectUnauthorized: false } });
+    // Supabase transaction pooler (port 6543) + one short-lived connection per serverless instance.
+    pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 1, idleTimeoutMillis: 5000, connectionTimeoutMillis: 8000,
+                         ssl: { rejectUnauthorized: false } });
   }
   return pool;
 }

@@ -219,8 +219,8 @@ The same trace is interactive on the dashboard (*Trace a review*).
 ## Database, backend and dashboard
 
 - **Database:** Supabase Postgres; schema [`db/schema.sql`](db/schema.sql) (`runs, issues, area_aggregates, monthly_trends, reviews` (all 660,622 records), `status_counts, recommendations, claims`). Loaded by `python -m pipeline.publish --run-dir runs/final` (COPY, one transaction).
-- **Backend:** Vercel serverless functions [`dashboard/api/`](dashboard/api/) (`overview, issues, issue, recommendation, review`) query Postgres with a **read-only** role; the connection string is a Vercel environment variable, never in browser code.
-- **Dashboard:** https://spotify-insight-dashboard-rosy.vercel.app - overall metrics and coverage, the AI-generated recommendation with each claim **re-checked live against the database**, alternatives and limitations, area comparison (all vs uniform sample), monthly trend, the baseline ranking with drill-down to member reviews, and a six-step trace for any review ID. No login required. Local preview: `node dashboard/dev-server.mjs` (reads `DATABASE_URL` from `.env`).
+- **Backend:** Vercel serverless functions [`dashboard/api/`](dashboard/api/) (`overview, issues, issue, recommendation, review`) query Postgres with a **read-only** role through Supabase's transaction pooler (port 6543, one short-lived connection per serverless instance - the session pooler's 15-client limit was exhausted under load); the connection string is a Vercel environment variable, never in browser code.
+- **Dashboard:** https://spotify-insight-dashboard-rosy.vercel.app - the answer and why (headline stats), the four focus areas side by side with trend sparklines and severity meters, overall metrics and coverage, the AI-generated recommendation with each claim **re-checked live against the database**, alternatives and limitations, area comparison (all vs uniform sample), monthly trend, the baseline ranking with drill-down to member reviews, and a six-step trace for any review ID. No login required. Local preview: `node dashboard/dev-server.mjs` (reads `DATABASE_URL` from `.env`).
 
 ## Repository map
 

@@ -4,11 +4,20 @@
     "description": "Classify the distinct texts of a 100,000-review uniform sample; every corpus row with an identical text reuses that saved result (cache_source_id). All 660,622 rows are ingested and accounted for.",
     "sample_size": 100000,
     "seed": "berkeley-fall-2026-assignment-5-v1",
-    "priority_files": ["golden_50_to_label.csv", "checkpoint_500.csv", "analysis_10000.csv"]
+    "priority_files": [
+      "golden_50_to_label.csv",
+      "checkpoint_500.csv",
+      "analysis_10000.csv"
+    ]
   },
   "budget": {
-    "spend_cap_usd": 9.0,
-    "stage_caps_usd": {"enrich": 7.0, "verify": 0.75, "group": 0.25, "memo": 0.5},
+    "spend_cap_usd": 6.5,
+    "stage_caps_usd": {
+      "enrich": 5.0,
+      "verify": 0.6,
+      "group": 0.2,
+      "memo": 0.4
+    },
     "max_minutes": 240
   },
   "roles": {
@@ -66,6 +75,12 @@
       "max_output_tokens": 6000
     }
   },
-  "retry": {"transient_max_attempts": 4, "backoff_base_s": 2.0, "backoff_max_s": 30.0, "invalid_output_retries": 1, "timeout_s": 90},
+  "retry": {
+    "transient_max_attempts": 4,
+    "backoff_base_s": 2.0,
+    "backoff_max_s": 30.0,
+    "invalid_output_retries": 1,
+    "timeout_s": 90
+  },
   "rates_file": "config/rates.csv"
 }

@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "spotify-dashboard", "runtimeExecutable": "node", "runtimeArgs": ["dev-server.mjs"], "port": 3007 }
+  ]
+}

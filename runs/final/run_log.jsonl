@@ -16,3 +16,6 @@
 {"ts": "2026-10-20T04:39:34.833+00:00", "stage": "enrich", "event": "requeue", "rows": 534, "reason_prefix": "invalid_model_output", "note": "parser fix: model restarting its list was misread as duplicate_ref; truncated responses now parsed line by line"}
 {"ts": "2026-10-20T04:39:35.714+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
 {"ts": "2026-10-20T04:40:52.408+00:00", "stage": "enrich", "event": "end", "seconds": 76.694}
+{"ts": "2026-10-20T05:23:47.226+00:00", "stage": "enrich", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T05:25:41.478+00:00", "stage": "enrich", "event": "stopped", "reason": "interrupted (SIGINT) - finishing in-flight batches, then saving", "seconds": 114.252}
+{"ts": "2026-10-20T05:27:17.418+00:00", "stage": "enrich", "event": "start", "provider": "openai"}

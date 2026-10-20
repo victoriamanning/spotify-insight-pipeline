@@ -160,7 +160,7 @@ function renderHeader() {
     ["Quarantined", fmt(Object.entries(ex).filter(([k]) => k.startsWith("quarantined") && !k.includes("out_of_scope")).reduce((a, [, v]) => a + v, 0)), `${fmt(q("quarantined:empty_review_text"))} empty texts · ${fmt(q("quarantined:invalid_model_output"))} invalid output`],
     ["Not classified (budget scope)", fmt(q("quarantined:out_of_scope_budget_sample")), "outside the 100k sample"],
     ["Complaint + cancellation", fmt(s.overall.complaint_or_cancellation_records), `${fmt(s.overall.cancellation_records)} with cancellation intent`],
-    ["API spend", "$" + Number(s.spent_usd).toFixed(2), "all roles, measured usage x dated rates"],
+    ["API spend", "$" + Number(s.spent_usd).toFixed(s.spent_usd < 1 ? 4 : 2), "all roles, measured usage x dated rates"],
   ];
   $("#kpis").innerHTML = tiles.map(([l, v, d]) => `<div class="card kpi" style="margin:0"><div class="l">${esc(l)}</div><div class="v">${esc(v)}</div><div class="muted">${esc(d)}</div></div>`).join("");
 }
@@ -191,12 +191,15 @@ function renderTrend() {
   let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Monthly complaint share by area">`;
   for (let g = 0; g <= 4; g++) { const v = (ymax * g) / 4; svg += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${L - 6}" y="${y(v) + 4}" font-size="10" fill="var(--text-muted)" text-anchor="end">${v.toFixed(0)}%</text>`; }
   data.forEach((d, i) => { if (i % 3 === 0 || i === data.length - 1) svg += `<text x="${x(i)}" y="${H - 8}" font-size="10" fill="var(--text-muted)" text-anchor="middle">${d.month.slice(2)}</text>`; });
+  const last = data[data.length - 1], ends = [];
   series.forEach(([k, c]) => {
     const pts = data.map((d, i) => `${x(i).toFixed(1)},${y(+d[k + "_share_pct"]).toFixed(1)}`).join(" ");
     svg += `<polyline points="${pts}" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
-    const last = data[data.length - 1];
-    svg += `<text x="${W - R + 6}" y="${y(+last[k + "_share_pct"]) + 4}" font-size="10" fill="var(--text-secondary)">${AREA_LABEL[k]}</text>`;
+    ends.push({ k, y: y(+last[k + "_share_pct"]) + 4 });
   });
+  ends.sort((a, b) => a.y - b.y);  // nudge end labels apart so they never collide
+  for (let i = 1; i < ends.length; i++) ends[i].y = Math.max(ends[i].y, ends[i - 1].y + 12);
+  ends.forEach((e) => (svg += `<text x="${W - R + 6}" y="${e.y}" font-size="10" fill="var(--text-secondary)">${AREA_LABEL[e.k]}</text>`));
   svg += `<line id="xh" x1="0" x2="0" y1="${T}" y2="${H - B}" stroke="var(--text-muted)" stroke-dasharray="3 3" visibility="hidden"/><rect x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent" id="hit"/></svg>`;
   $("#trend").innerHTML = svg;
   $("#trendLegend").innerHTML = series.map(([k, c]) => `<span><span class="sw" style="background:${c}"></span>${AREA_LABEL[k]}</span>`).join("");

@@ -1,0 +1,94 @@
+{
+  "version": "taxonomy_v1",
+  "topics": {
+    "access": {
+      "definition": "Login, signup, password or account access",
+      "subtopics": {
+        "login_failure": "Cannot log in / logged out / login loop / login errors",
+        "account_hacked": "Account taken over, email changed, unknown devices or activity",
+        "signup": "Cannot create an account or verify email/phone",
+        "account_management": "Password reset, linked accounts (Facebook/Google), deleting or recovering an account",
+        "other": "Other account-access problem"
+      }
+    },
+    "usability": {
+      "definition": "Navigation, controls, layout, queue/playlist management, ad interruptions",
+      "subtopics": {
+        "ads": "Ad frequency, length, loudness, ads interrupting listening",
+        "ui_redesign": "Disliked update / new layout / removed familiar UI element",
+        "navigation_controls": "Hard to find things, buttons, gestures, widgets, notifications, settings",
+        "library_playlists": "Liked songs, playlist/queue/library management problems",
+        "shuffle_autoplay": "Shuffle or autoplay behaviour that is not described as premium-only",
+        "other": "Other usability problem"
+      }
+    },
+    "playback": {
+      "definition": "Playback failure, crashes, lag, connection failures, audio quality, resource use",
+      "subtopics": {
+        "crash_wont_open": "App crashes, freezes, won't open, black/blank screen",
+        "stops_skips": "Music stops, pauses, skips or won't start playing",
+        "lag_slow": "Lag, slow loading, buffering, laggy UI",
+        "connection_error": "No internet / offline errors while online, connection failures",
+        "audio_quality": "Sound quality, volume, audio glitches",
+        "device_integration": "Bluetooth, car, Android Auto, Chromecast, smartwatch, Connect",
+        "battery_resources": "Battery drain, storage, data or memory use",
+        "other": "Other playback problem"
+      }
+    },
+    "downloads": {
+      "definition": "Downloading, saved music, offline listening, disappearing downloads",
+      "subtopics": {
+        "downloads_disappear": "Downloaded music removed / must re-download",
+        "cannot_download": "Download fails, stuck, or download option missing",
+        "offline_mode": "Offline listening fails",
+        "other": "Other downloads problem"
+      }
+    },
+    "catalog": {
+      "definition": "Missing songs/artists, search/discovery, recommendations, lyrics availability",
+      "subtopics": {
+        "missing_content": "Songs, artists, albums or regions missing or removed; content policy/censorship",
+        "search": "Search does not find content",
+        "recommendations": "Recommendations, algorithm, radio, mixes, DJ",
+        "lyrics": "Lyrics missing, wrong or out of sync (lyrics behind a paywall is billing)",
+        "podcasts_audiobooks": "Podcast or audiobook content and features",
+        "other": "Other catalog/content problem"
+      }
+    },
+    "billing": {
+      "definition": "Price, charges, subscriptions, paywalls, premium entitlement; explicitly premium-only controls go here",
+      "subtopics": {
+        "free_tier_limits": "Skip limits, shuffle-only, can't choose songs, features moved behind premium",
+        "price": "Price too high or price increase",
+        "unwanted_charge": "Charged unexpectedly, double charge, charged after cancelling, refund",
+        "premium_not_working": "Paid but premium not active, family/student plan problems",
+        "other": "Other billing problem"
+      }
+    },
+    "support": {
+      "definition": "Contacting support and the support response",
+      "subtopics": {
+        "no_response": "Cannot reach support or no reply",
+        "unhelpful": "Support replied but did not help",
+        "other": "Other support problem"
+      }
+    },
+    "other": {
+      "definition": "General praise/criticism, unrelated content, or no supported specific topic",
+      "subtopics": {
+        "general": "General praise or general criticism with no specific feature",
+        "unrelated": "Unrelated, political/boycott slogans, meaningless or unsupported-language text",
+        "other": "Anything else"
+      }
+    }
+  },
+  "intents": ["cancellation", "complaint", "request", "praise", "unclear"],
+  "severity": {
+    "1": "No reported problem: praise, neutral/unclear content, or a pure feature request",
+    "2": "Dislike, generic criticism, minor annoyance, or a cosmetic issue; no supported functional loss",
+    "3": "A degraded or restricted function; some use or workaround remains",
+    "4": "A clearly blocked core task, such as inability to log in or play music",
+    "5": "Explicit serious financial, privacy, or data harm"
+  },
+  "sentiment_levels": {"-2": "very negative", "-1": "negative", "0": "neutral or mixed", "1": "positive", "2": "very positive"}
+}

@@ -1,0 +1,151 @@
+{
+  "source_file": "spotify_reviews_18months.csv",
+  "file_sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+  "bytes": 97400616,
+  "checker_profile": {
+    "file_sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+    "parsed_rows_sha256": "eb5ea1e15f020212004a5b1e2f873e45a9f105d1b4516ad077020492364f71ff",
+    "counts": {
+      "records": 660622,
+      "duplicate_review_ids": 0,
+      "empty_review_text": 13,
+      "missing_app_version": 159701
+    },
+    "reviews_by_month": {
+      "2022-05": 15461,
+      "2022-06": 30338,
+      "2022-07": 32784,
+      "2022-08": 30732,
+      "2022-09": 26933,
+      "2022-10": 27572,
+      "2022-11": 27349,
+      "2022-12": 31744,
+      "2023-01": 28609,
+      "2023-02": 20889,
+      "2023-03": 27238,
+      "2023-04": 25014,
+      "2023-05": 28062,
+      "2023-06": 27117,
+      "2023-07": 85079,
+      "2023-08": 30438,
+      "2023-09": 41634,
+      "2023-10": 89104,
+      "2023-11": 34525
+    },
+    "reviews_by_rating": {
+      "1": 242620,
+      "5": 299560,
+      "3": 33268,
+      "2": 31034,
+      "4": 54140
+    },
+    "first_review": "2022-05-17 00:01:07",
+    "last_review": "2023-11-15 23:16:10"
+  },
+  "records": 660622,
+  "unique_review_ids": 660622,
+  "duplicate_review_ids": 0,
+  "empty_review_text": 13,
+  "empty_review_ids": [
+    "5d085a1f-1737-45a6-a3fb-5211b327ec27",
+    "be032618-08ae-4dde-b0b2-d2ddcd8ea5a6",
+    "f7c94991-0fc2-49a5-b47e-510e97a1632c",
+    "f5b40f1f-6621-456f-b1f2-0b3a9361c793",
+    "7121867d-b162-4b15-a45f-6352dcff92c1",
+    "f0df3892-1cfd-44f6-b3bb-a2eef7e69f6e",
+    "a3b536ac-b508-4e02-8550-ff7ea0bf79c2",
+    "b9587209-7961-4fd2-903c-fcd0fa924721",
+    "1687e070-9c26-4657-9ecc-0141405bcd4b",
+    "34bf6347-1625-46cd-b6fa-82913e2f665d",
+    "e4a05a09-be34-40a3-9b4a-e3976dea1b82",
+    "1bbad718-5df1-4669-841d-d1d6a040945a",
+    "7c26b1a0-8e0b-426d-976c-15b526f94e30"
+  ],
+  "missing_app_version": 159701,
+  "nonempty_reviews": 660609,
+  "distinct_nonempty_texts": 484189,
+  "rows_sharing_a_duplicated_text": 192342,
+  "top_duplicate_texts": [
+    {
+      "text": "Good",
+      "count": 12845
+    },
+    {
+      "text": "Nice",
+      "count": 5551
+    },
+    {
+      "text": "Excellent",
+      "count": 4096
+    },
+    {
+      "text": "Great",
+      "count": 3948
+    },
+    {
+      "text": "Awesome",
+      "count": 3359
+    },
+    {
+      "text": "Love it",
+      "count": 3136
+    },
+    {
+      "text": "Very good",
+      "count": 2769
+    },
+    {
+      "text": "Nice app",
+      "count": 2134
+    },
+    {
+      "text": "Amazing",
+      "count": 1973
+    },
+    {
+      "text": "Worst app",
+      "count": 1901
+    },
+    {
+      "text": "Good app",
+      "count": 1871
+    },
+    {
+      "text": "Super",
+      "count": 1837
+    },
+    {
+      "text": "Best",
+      "count": 1666
+    },
+    {
+      "text": "Great app",
+      "count": 1617
+    },
+    {
+      "text": "Hate this application 👎",
+      "count": 1417
+    }
+  ],
+  "ratings": {
+    "1": 242620,
+    "2": 31034,
+    "3": 33268,
+    "4": 54140,
+    "5": 299560
+  },
+  "first_review": "2022-05-17 00:01:07",
+  "last_review": "2023-11-15 23:16:10",
+  "scope": {
+    "label_config": "gpt-6-luna@none+enrich_v1+lines_v1",
+    "sample_size_requested": 100000,
+    "sample_reviews": 100000,
+    "sample_distinct_texts_to_classify": 78099,
+    "priority_ids_first": 10050,
+    "out_of_sample_rows_reusing_a_sample_text": 137942,
+    "rows_out_of_scope": 422667,
+    "ordering": "golden_50 -> checkpoint_500 -> analysis_10000 -> SHA-256(seed:review_id) ascending",
+    "seed": "berkeley-fall-2026-assignment-5-v1"
+  },
+  "runtime_s": 95.706
+}

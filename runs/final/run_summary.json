@@ -1,0 +1,19 @@
+{
+  "run_id": "final",
+  "finished_at": "2026-10-20T03:53:19.724+00:00",
+  "stages": [
+    "ingest"
+  ],
+  "stage_seconds": {
+    "ingest": 96.215
+  },
+  "wall_clock_s": 96.218,
+  "provider": "openai",
+  "spend_cap_usd": 9.0,
+  "spent_usd_total": 0,
+  "calls_by_role_outcome": [],
+  "queue_status": {
+    "pending": 78099
+  },
+  "enrich": null
+}

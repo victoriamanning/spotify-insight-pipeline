@@ -1,0 +1,2 @@
+{"ts": "2026-10-20T03:51:43.505+00:00", "stage": "ingest", "event": "start", "provider": "openai"}
+{"ts": "2026-10-20T03:53:19.721+00:00", "stage": "ingest", "event": "end", "seconds": 96.215}

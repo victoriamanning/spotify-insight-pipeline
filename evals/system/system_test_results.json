@@ -1,0 +1,193 @@
+{
+  "malformed_output_parser": {
+    "valid": {
+      "completed_refs": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "errors": {},
+      "quotes": {
+        "r1": [
+          "The app crashes on start",
+          "exact"
+        ],
+        "r2": [
+          "Great music",
+          "exact"
+        ],
+        "r3": [
+          "too many ads",
+          "exact"
+        ]
+      },
+      "flags": {},
+      "all_quotes_are_substrings": true
+    },
+    "missing_line": {
+      "completed_refs": [
+        "r1",
+        "r2"
+      ],
+      "errors": {
+        "r3": "missing_in_output"
+      },
+      "quotes": {
+        "r1": [
+          "The app crashes on start",
+          "exact"
+        ],
+        "r2": [
+          "Great music",
+          "exact"
+        ]
+      },
+      "flags": {},
+      "all_quotes_are_substrings": true
+    },
+    "foreign_ref": {
+      "completed_refs": [
+        "r1",
+        "r3"
+      ],
+      "errors": {
+        "r2": "missing_in_output"
+      },
+      "quotes": {
+        "r1": [
+          "crashes",
+          "exact"
+        ],
+        "r3": [
+          "too many ads",
+          "exact"
+        ]
+      },
+      "flags": {},
+      "all_quotes_are_substrings": true
+    },
+    "duplicate_ref": {
+      "completed_refs": [],
+      "errors": {
+        "r1": "duplicate_ref",
+        "r2": "missing_in_output",
+        "r3": "missing_in_output"
+      },
+      "quotes": {},
+      "flags": {},
+      "all_quotes_are_substrings": true
+    },
+    "bad_label": {
+      "completed_refs": [],
+      "errors": {
+        "r1": "invalid_topic:crashes",
+        "r2": "invalid_intent:love",
+        "r3": "out_of_range"
+      },
+      "quotes": {},
+      "flags": {},
+      "all_quotes_are_substrings": true
+    },
+    "paraphrased_quote": {
+      "completed_refs": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "errors": {},
+      "quotes": {
+        "r1": [
+          "The app crashes on start",
+          "case_repaired"
+        ],
+        "r2": [
+          "Great music",
+          "full_text_fallback"
+        ],
+        "r3": [
+          "too many ads",
+          "exact"
+        ]
+      },
+      "flags": {
+        "r1": [
+          "quote:case_repaired"
+        ],
+        "r2": [
+          "quote:full_text_fallback"
+        ],
+        "r3": [
+          "entities_dropped:1"
+        ]
+      },
+      "all_quotes_are_substrings": true
+    },
+    "rule_violation": {
+      "completed_refs": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "errors": {},
+      "quotes": {
+        "r1": [
+          "crashes",
+          "exact"
+        ],
+        "r2": [
+          "Great music",
+          "exact"
+        ],
+        "r3": [
+          "ads",
+          "exact"
+        ]
+      },
+      "flags": {
+        "r1": [
+          "severity_rule:praise:4->1"
+        ],
+        "r2": [
+          "severity_rule:complaint:1->2"
+        ],
+        "r3": [
+          "subtopic_coerced:banner"
+        ]
+      },
+      "all_quotes_are_substrings": true
+    },
+    "garbage": {
+      "completed_refs": [],
+      "errors": {
+        "r1": "missing_in_output",
+        "r2": "missing_in_output",
+        "r3": "missing_in_output"
+      },
+      "quotes": {},
+      "flags": {},
+      "all_quotes_are_substrings": true
+    }
+  },
+  "transient_failure_retry": {
+    "exit": 0,
+    "attempts_logged": 4,
+    "failed_attempts": [
+      "RuntimeError: 503 injected temporary failure (test fault plan)",
+      "RuntimeError: 503 injected temporary failure (test fault plan)"
+    ],
+    "succeeded": 2,
+    "log_tail": "enrich[initial]: 100 new texts in 2 batches, 0 retries, workers=1, cap=$9.00, spent so far=$0.0000\n  batches=2 completed+=100 retried=0 quarantined+=0 failed_calls=2 | queue {'completed': 100} | spent $0.0016 | 4s (23.6 texts/s)\ndone: ['enrich'] in 4.245s; total spent $0.0016\n"
+  },
+  "spend_cap_stop_and_resume": {
+    "cap_usd": 0.004,
+    "calls_before_stop": 3,
+    "spent_before_stop": 0.002345,
+    "stop_log": [
+      "budget stop: global cap $0.0040: spent 0.0023 + reserved 0.0000 + next 0.0019",
+      "stopped: budget stop: global cap $0.0040: spent 0.0023 + reserved 0.0000 + next 0.0019. Re-run the same command to resume."
+    ],
+    "calls_after_resume": 10,
+    "resume_log_tail": "enrich[initial]: 329 new texts in 7 batches, 0 retries, workers=1, cap=$9.00, spent so far=$0.0023\n  batches=7 completed+=329 retried=0 quarantined+=0 failed_calls=0 | queue {'completed': 479} | spent $0.0075 | 1s (269.5 texts/s)\ndone: ['enrich'] in 1.225s; total spent $0.0075\n",
+    "duplicate_ids_across_calls": 0
+  }
+}
